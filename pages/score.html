@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quiero Jugar - GPADEL - Plataforma de Gestión de Padel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  
+  <!-- NAVBAR -->
+  <header class="gp-header">
+    <div class="gp-container gp-header-inner">
+      <a href="../index.html" class="gp-logo-link">
+        <img src="../img/gpadel-logo.svg" alt="GPADÉL - Plataforma de gestión de pádel" class="gp-logo-img">
+      </a>
+
+      <!-- Navegación desktop -->
+      <nav class="gp-nav">
+        <a href="quiero-jugar.html" class="gp-nav-link">Quiero jugar</a>
+        <a href="score.html" class="gp-nav-link gp-nav-link--active">Quiero marcar</a>
+        <a href="como-funciona.html" class="gp-nav-link">¿Cómo funciona?</a>
+        <a href="contacto.html" class="gp-nav-link">Contacto</a>
+      </nav>
+      <div class="gp-header-actions">
+        <a href="canchas-ligas.html" class="gp-header-cta">Canchas o Ligas</a>
+        <a href="login.html" class="gp-header-icon" aria-label="Iniciar sesión">
+          <i class="fa-regular fa-user"></i>
+        </a>
+
+        <!-- Botón hamburguesa (solo se ve en mobile utilicé un JavaScript base ya que desconozco armarlo) -->
+        <button class="gp-header-burger"
+                id="gpMenuToggle"
+                aria-label="Abrir menú"
+                aria-expanded="false">
+          <i class="fa-solid fa-bars"></i>
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- NAV MOBILE (se abre con la hamburguesa, js base extra, repito, no conozco JS aun) -->
+    <nav class="gp-nav-mobile" id="gpMobileNav">
+      <a href="quiero-jugar.html">Quiero jugar</a>
+      <a href="score.html">Quiero marcar</a>
+      <a href="como-funciona.html">¿Cómo funciona?</a>
+      <a href="canchas-ligas.html">Canchas o Ligas</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </header>
+
+   <!-- HERO -->
+  <section class="gp-pages-hero">
+    <div class="gp-container">
+      <h1>
+        Marcador de padel en vivo
+      </h1>
+      <p>
+        Creá tu partido, llevá el score y compartilo con tu equipo o con el mundo.
+      </p>
+    </div>
+
+    <div class="gp-hero-cta">
+        <a href="score-type.html" class="gp-btn gp-btn--primary">Crear marcador</a>
+        <a href="partidos-vivo.html" class="gp-btn gp-btn--secondary">Partidos en vivo</a>
+      </div>
+  </section>
+
+      <!-- FOOTER (igual que index) -->
+  <footer class="gp-footer">
+    <div class="gp-footer-top gp-container">
+
+      <!-- WhatsApp -->
+      <a href="https://wa.me/5492494521418" target="_blank" rel="noopener" class="gp-footer-block gp-footer-link">
+        <i class="fa-brands fa-whatsapp gp-footer-icon"></i>
+        <span class="gp-footer-text">+54 9 249 4521418</span>
+      </a>
+
+      <!-- Email -->
+      <a href="mailto:info@gpadel.com.ar" class="gp-footer-block gp-footer-link">
+        <i class="fa-regular fa-envelope gp-footer-icon"></i>
+        <span class="gp-footer-text">info@gpadel.com.ar</span>
+      </a>
+
+      <!-- Dirección -->
+      <a href="https://www.google.com/maps?q=Alem+1015,+Tandil" target="_blank" rel="noopener" class="gp-footer-block gp-footer-link">
+        <i class="fa-solid fa-map-location-dot gp-footer-icon"></i>
+        <span class="gp-footer-text">
+          Alem 1015 – Tandil<br>Buenos Aires – Argentina
+        </span>
+      </a>
+
+    </div>
+
+    <!-- Redes sociales -->
+    <div class="gp-footer-social">
+      <a href="https://facebook.com/geneoscoop" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="https://instagram.com/geneos.coop" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://twitter.com/GeneosCoop" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="https://www.linkedin.com/company/geneoscoop/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i></a>
+    </div>
+
+    <div class="gp-footer-bottom">
+      DISEÑADO POR COOPERATIVA GENEOS LTDA.
+    </div>
+  </footer>
+
+  </body>
+</html>
