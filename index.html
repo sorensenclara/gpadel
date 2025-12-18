@@ -1,48 +1,79 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>GPADEL - Plataforma de Gestión de Padel</title>
-  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GPADEL - Plataforma de Gestión de Pádel</title>
 
-  <!-- NAVBAR -->
+  <!-- Tipografía -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Librerías CSS (para consistencia cross-browser e íconos) -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+
+  <!-- Estilos propios -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <!-- Framework elegido: CSS Grid + Flexbox (layout nativo, sin Bootstrap) -->
+
+  <!-- HEADER / NAVBAR-->
   <header class="gp-header">
     <div class="gp-container gp-header-inner">
-      <a href="index.html" class="gp-logo-link">
-        <img src="img/gpadel-logo.svg" alt="GPADÉL - Plataforma de gestión de pádel" class="gp-logo-img">
+      <a href="index.html" class="gp-logo-link" aria-label="Ir al inicio">
+        <img
+          src="img/gpadel-logo.svg"
+          alt="GPADÉL - Plataforma de gestión de pádel"
+          class="gp-logo-img"
+        />
       </a>
 
       <!-- Navegación desktop -->
-      <nav class="gp-nav">
+      <nav class="gp-nav" aria-label="Navegación principal">
         <a href="./pages/quiero-jugar.html" class="gp-nav-link">Quiero jugar</a>
         <a href="./pages/score.html" class="gp-nav-link">Quiero marcar</a>
         <a href="#como-funciona" class="gp-nav-link">¿Cómo funciona?</a>
         <a href="./pages/contacto.html" class="gp-nav-link">Contacto</a>
       </nav>
+
+      <!-- Acciones -->
       <div class="gp-header-actions">
         <a href="./pages/canchas-ligas.html" class="gp-header-cta">Canchas o Ligas</a>
+
         <a href="./pages/login.html" class="gp-header-icon" aria-label="Iniciar sesión">
-          <i class="fa-regular fa-user"></i>
+          <i class="fa-regular fa-user" aria-hidden="true"></i>
         </a>
 
-        <!-- Botón hamburguesa (solo se ve en mobile utilicé un JavaScript base ya que desconozco armarlo) -->
-        <button class="gp-header-burger"
-                id="gpMenuToggle"
-                aria-label="Abrir menú"
-                aria-expanded="false">
-          <i class="fa-solid fa-bars"></i>
-          <i class="fa-solid fa-xmark"></i>
+        <!-- Botón hamburguesa (visible solo en mobile) -->
+        <button
+          class="gp-header-burger"
+          id="gpMenuToggle"
+          type="button"
+          aria-label="Abrir menú"
+          aria-controls="gpMobileNav"
+          aria-expanded="false"
+        >
+          <i class="fa-solid fa-bars" aria-hidden="true"></i>
+          <i class="fa-solid fa-xmark" aria-hidden="true"></i>
         </button>
       </div>
     </div>
 
-    <!-- NAV MOBILE (se abre con la hamburguesa, js base extra, repito, no conozco JS aun) -->
-    <nav class="gp-nav-mobile" id="gpMobileNav">
+    <!-- NAV MOBILE (se abre con la hamburguesa) -->
+    <nav class="gp-nav-mobile" id="gpMobileNav" aria-label="Navegación mobile">
       <a href="./pages/quiero-jugar.html">Quiero jugar</a>
       <a href="./pages/score.html">Quiero marcar</a>
       <a href="#como-funciona">¿Cómo funciona?</a>
@@ -51,179 +82,204 @@
     </nav>
   </header>
 
-  <!-- Barra de búsqueda -->
-  <div class="gp-search-bar-wrapper">
-    <div class="gp-container">
-      <div class="gp-search-bar">
-        <div class="gp-search-field">
-          <span class="gp-search-label">¿Dónde?</span>
-          <span class="gp-search-placeholder">Poné la ciudad y explorá las canchas</span>
+  <!-- MAIN CONTENT -->
+  <main>
+    <!-- Barra de búsqueda -->
+    <section class="gp-search-bar-wrapper" aria-label="Búsqueda de canchas">
+      <div class="gp-container">
+        <div class="gp-search-bar">
+          <div class="gp-search-field">
+            <span class="gp-search-label">¿Dónde?</span>
+            <span class="gp-search-placeholder">Poné la ciudad y explorá las canchas</span>
+          </div>
+
+          <div class="gp-search-field">
+            <span class="gp-search-label">Fecha</span>
+            <span class="gp-search-placeholder">¿Qué día?</span>
+          </div>
+
+          <div class="gp-search-field">
+            <span class="gp-search-label">Hora</span>
+            <span class="gp-search-placeholder">¿En qué rango horario?</span>
+          </div>
+
+          <button class="gp-search-btn" type="button" aria-label="Buscar canchas">
+            <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+          </button>
         </div>
-        <div class="gp-search-field">
-          <span class="gp-search-label">Fecha</span>
-          <span class="gp-search-placeholder">¿Qué día?</span>
-        </div>
-        <div class="gp-search-field">
-          <span class="gp-search-label">Hora</span>
-          <span class="gp-search-placeholder">¿En qué rango horario?</span>
-        </div>
-        <button class="gp-search-btn" aria-label="Buscar canchas">
-          <i class="fa-solid fa-magnifying-glass"></i>
-        </button>
       </div>
-    </div>
-  </div>
+    </section>
 
+    <!-- HERO -->
+    <section id="hero" class="gp-hero">
+      <div class="gp-container gp-hero-inner">
+        <!-- Texto -->
+        <div class="gp-hero-text">
+          <h1>
+            Reservá, jugá y llevá<br />
+            el score a tus partidos
+          </h1>
 
- <!-- HERO -->
-<section id="hero" class="gp-hero">
-  <div class="gp-container gp-hero-inner">
+          <p>
+            La forma más simple de organizar tus partidos, reservar turnos y llevar
+            control de cada uno de ellos desde una sola plataforma.
+          </p>
 
-    <!-- TEXTO -->
-    <div class="gp-hero-text">
-      <h1>
-        Reservá, jugá y llevá<br>
-        el score a tus partidos
-      </h1>
-      <p>
-        La forma más simple de organizar tus partidos, reservar turnos y llevar
-        control de cada uno de ellos desde una sola plataforma.
-      </p>
+          <div class="gp-hero-cta">
+            <a href="./pages/quiero-jugar.html" class="gp-btn gp-btn--primary">Quiero jugar</a>
+            <a href="./pages/score.html" class="gp-btn gp-btn--secondary">Quiero marcar</a>
+          </div>
+        </div>
 
-      <div class="gp-hero-cta">
-        <a href="./pages/quiero-jugar.html" class="gp-btn gp-btn--primary">Quiero jugar</a>
-        <a href="./pages/score.html" class="gp-btn gp-btn--secondary">Quiero marcar</a>
+        <!-- Imagen -->
+        <div class="gp-hero-image">
+          <img src="img/img-pelota-gpadel.png" alt="Pelota de pádel" />
+        </div>
       </div>
-    </div>
+    </section>
 
-    <!-- IMAGEN DE LA CANCHA y PELOTA-->
-    <div class="gp-hero-image">
-      <img src="img/img-pelota-gpadel.png" alt="Pádel" />
-    </div>
-
-  </div>
-</section>
-
-
-  <!-- CÓMO FUNCIONA, incluí el ID para que pueda llamarlo en el menu, se que se usa para JS pero aqui tb -->
+    <!-- CÓMO FUNCIONA -->
     <section id="como-funciona" class="gp-section">
-    <div class="gp-container">
+      <div class="gp-container">
         <h2 class="gp-section-title">¿Cómo funciona?</h2>
 
         <div class="gp-steps">
-
-        <div class="gp-step">
+          <article class="gp-step">
             <div class="gp-step-icon">
-            <img src="img/icon-buscar.svg" alt="Buscar">
+              <img src="img/icon-buscar.svg" alt="Icono buscar" />
             </div>
             <div class="gp-step-card">
-            <h3>Buscá la cancha</h3>
-            <p>Elegí la ciudad y encontrá canchas disponibles cerca tuyo.</p>
+              <h3>Buscá la cancha</h3>
+              <p>Elegí la ciudad y encontrá canchas disponibles cerca tuyo.</p>
             </div>
-        </div>
+          </article>
 
-        <div class="gp-step">
+          <article class="gp-step">
             <div class="gp-step-icon">
-            <img src="img/icon-reservar.svg" alt="Reservar">
+              <img src="img/icon-reservar.svg" alt="Icono reservar" />
             </div>
             <div class="gp-step-card">
-            <h3>Reservá la que desees</h3>
-            <p>Definí día, horario y confirmá tu reserva en pocos clics.</p>
+              <h3>Reservá la que desees</h3>
+              <p>Definí día, horario y confirmá tu reserva en pocos clics.</p>
             </div>
-        </div>
+          </article>
 
-        <div class="gp-step">
+          <article class="gp-step">
             <div class="gp-step-icon">
-            <img src="img/icon-cancha.svg" alt="Marcar partido">
+              <img src="img/icon-cancha.svg" alt="Icono cancha" />
             </div>
             <div class="gp-step-card">
-            <h3>Usá el score</h3>
-            <p>Controlá tu partido en vivo y guardá estadísticas.</p>
+              <h3>Usá el score</h3>
+              <p>Controlá tu partido en vivo y guardá estadísticas.</p>
             </div>
+          </article>
         </div>
-
-        </div>
-    </div>
+      </div>
     </section>
 
+    <!-- TESTIMONIOS -->
+    <section class="gp-section gp-section--light" aria-label="Testimonios de usuarios">
+      <div class="gp-container">
+        <h2 class="gp-section-title">Nuestros usuarios comentan</h2>
 
-  <!-- TESTIMONIOS -->
-  <section class="gp-section gp-section--light">
-    <div class="gp-container">
-      <h2 class="gp-section-title">Nuestros usuarios comentan</h2>
+          <div class="gp-testimonial-wrapper">
+            <button class="gp-testimonial-arrow" id="gpTestPrev" type="button" aria-label="Anterior">‹</button>
 
-      <div class="gp-testimonial-wrapper">
-        <button class="gp-testimonial-arrow" aria-label="Anterior">‹</button>
+            <article class="gp-testimonial" aria-live="polite">
+              <p class="gp-testimonial-text" id="gpTestText"></p>
 
-        <article class="gp-testimonial">
-          <p class="gp-testimonial-text">
-            “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exerci.”
-          </p>
-
-          <div class="gp-testimonial-footer">
-            <div class="gp-testimonial-user">
-              <div class="gp-avatar"></div>
-              <div>
-                <div class="gp-testimonial-name">Nombre y Apellido</div>
-                <div class="gp-testimonial-cat">Categoría 8va</div>
+              <div class="gp-testimonial-footer">
+                <div class="gp-testimonial-user">
+                  <div class="gp-avatar"></div>
+                  <div>
+                    <div class="gp-testimonial-name" id="gpTestName"></div>
+                    <div class="gp-testimonial-cat" id="gpTestCat"></div>
+                  </div>
+                </div>
+                <div class="gp-testimonial-stars" id="gpTestStars"></div>
               </div>
-            </div>
-            <div class="gp-testimonial-stars">★★★★★</div>
+            </article>
+
+            <button class="gp-testimonial-arrow" id="gpTestNext" type="button" aria-label="Siguiente">›</button>
           </div>
-        </article>
 
-        <button class="gp-testimonial-arrow" aria-label="Siguiente">›</button>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CTA -->
-  <section class="gp-cta-band">
-    <div class="gp-container-min gp-cta-inner">
-      <div>
-        <h3>Tienes dudas o necesitas ayuda</h3>
-        <p>Escríbenos, nos contactaremos a la brevedad.</p>
+    <!-- CTA -->
+    <section class="gp-cta-band" aria-label="Contacto por WhatsApp">
+      <div class="gp-container-min gp-cta-inner">
+        <div>
+          <h3>Tienes dudas o necesitas ayuda</h3>
+          <p>Escríbenos, nos contactaremos a la brevedad.</p>
+        </div>
+
+        <a
+          href="https://wa.me/5492494521418"
+          class="gp-btn gp-btn--primary gp-btn--rounded"
+          target="_blank"
+          rel="noopener"
+        >
+          Whatsapp
+        </a>
       </div>
-      <a href="https://wa.me/5492494521418" class="gp-btn gp-btn--primary gp-btn--rounded" target="_blank" rel="noopener">
-        Whatsapp
-      </a>
-    </div>
-  </section>
+    </section>
+  </main>
 
   <!-- FOOTER -->
   <footer class="gp-footer">
     <div class="gp-footer-top gp-container">
-
       <!-- WhatsApp -->
-      <a href="https://wa.me/5492494521418" target="_blank" rel="noopener" class="gp-footer-block gp-footer-link">
-        <i class="fa-brands fa-whatsapp gp-footer-icon"></i>
+      <a
+        href="https://wa.me/5492494521418"
+        target="_blank"
+        rel="noopener"
+        class="gp-footer-block gp-footer-link"
+      >
+        <i class="fa-brands fa-whatsapp gp-footer-icon" aria-hidden="true"></i>
         <span class="gp-footer-text">+54 9 249 4521418</span>
       </a>
 
       <!-- Email -->
       <a href="mailto:info@gpadel.com.ar" class="gp-footer-block gp-footer-link">
-        <i class="fa-regular fa-envelope gp-footer-icon"></i>
+        <i class="fa-regular fa-envelope gp-footer-icon" aria-hidden="true"></i>
         <span class="gp-footer-text">info@gpadel.com.ar</span>
       </a>
 
       <!-- Dirección -->
-      <a href="https://maps.app.goo.gl/JvontvXCzVbkZqmRA" target="_blank" rel="noopener" class="gp-footer-block gp-footer-link">
-        <i class="fa-solid fa-map-location-dot gp-footer-icon"></i>
+      <a
+        href="https://maps.app.goo.gl/JvontvXCzVbkZqmRA"
+        target="_blank"
+        rel="noopener"
+        class="gp-footer-block gp-footer-link"
+      >
+        <i class="fa-solid fa-map-location-dot gp-footer-icon" aria-hidden="true"></i>
         <span class="gp-footer-text">
-          Alem 1015 – Tandil<br>Buenos Aires – Argentina
+          Alem 1015 – Tandil<br />
+          Buenos Aires – Argentina
         </span>
       </a>
-
     </div>
 
-    <!-- Redes sociales -->
-    <div class="gp-footer-social">
-      <a href="https://facebook.com/geneoscoop" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i></a>
-      <a href="https://instagram.com/geneos.coop" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
-      <a href="https://twitter.com/GeneosCoop" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i></a>
-      <a href="https://www.linkedin.com/company/geneoscoop/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i></a>
+    <!-- Redes -->
+    <div class="gp-footer-social" aria-label="Redes sociales">
+      <a href="https://facebook.com/geneoscoop" target="_blank" rel="noopener" aria-label="Facebook">
+        <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+      </a>
+      <a href="https://instagram.com/geneos.coop" target="_blank" rel="noopener" aria-label="Instagram">
+        <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+      </a>
+      <a href="https://twitter.com/GeneosCoop" target="_blank" rel="noopener" aria-label="X">
+        <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+      </a>
+      <a
+        href="https://www.linkedin.com/company/geneoscoop/"
+        target="_blank"
+        rel="noopener"
+        aria-label="LinkedIn"
+      >
+        <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+      </a>
     </div>
 
     <div class="gp-footer-bottom">
@@ -231,20 +287,7 @@
     </div>
   </footer>
 
-  <!-- JS simple para menú hamburguesa rescatado porque aun no se JavaScript -->
-  <script>
-    (function () {
-      const toggle = document.getElementById('gpMenuToggle');
-      const mobileNav = document.getElementById('gpMobileNav');
+<script src="js/main.js"></script>
 
-      if (!toggle || !mobileNav) return;
-
-      toggle.addEventListener('click', function () {
-        const isOpen = mobileNav.classList.toggle('gp-nav-mobile--open');
-        toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-        toggle.classList.toggle('is-open', isOpen);
-      });
-    })();
-  </script>
 </body>
 </html>
