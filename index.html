@@ -1,9 +1,9 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>GPADEL - Plataforma de Gestión de Pádel</title>
+  <title>GPADEL – Elegí tu perfil</title>
 
   <!-- Tipografía -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -13,281 +13,53 @@
     rel="stylesheet"
   />
 
-  <!-- Librerías CSS (para consistencia cross-browser e íconos) -->
+  <!-- Libreria -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
   />
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-  />
 
-  <!-- Estilos propios -->
+  <!-- Estilos -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
 
-<body>
-  <!-- Framework elegido: CSS Grid + Flexbox (layout nativo, sin Bootstrap) -->
+<body class="gp-entrada">
 
-  <!-- HEADER / NAVBAR-->
-  <header class="gp-header">
-    <div class="gp-container gp-header-inner">
-      <a href="index.html" class="gp-logo-link" aria-label="Ir al inicio">
-        <img
-          src="img/gpadel-logo.svg"
-          alt="GPADÉL - Plataforma de gestión de pádel"
-          class="gp-logo-img"
-        />
-      </a>
-
-      <!-- Navegación desktop -->
-      <nav class="gp-nav" aria-label="Navegación principal">
-        <a href="./pages/quiero-jugar.html" class="gp-nav-link">Quiero jugar</a>
-        <a href="./pages/score.html" class="gp-nav-link">Quiero marcar</a>
-        <a href="#como-funciona" class="gp-nav-link">¿Cómo funciona?</a>
-        <a href="./pages/contacto.html" class="gp-nav-link">Contacto</a>
-      </nav>
-
-      <!-- Acciones -->
-      <div class="gp-header-actions">
-        <a href="./pages/canchas-ligas.html" class="gp-header-cta">Canchas o Ligas</a>
-
-        <a href="./pages/login.html" class="gp-header-icon" aria-label="Iniciar sesión">
-          <i class="fa-regular fa-user" aria-hidden="true"></i>
-        </a>
-
-        <!-- Botón hamburguesa (visible solo en mobile) -->
-        <button
-          class="gp-header-burger"
-          id="gpMenuToggle"
-          type="button"
-          aria-label="Abrir menú"
-          aria-controls="gpMobileNav"
-          aria-expanded="false"
-        >
-          <i class="fa-solid fa-bars" aria-hidden="true"></i>
-          <i class="fa-solid fa-xmark" aria-hidden="true"></i>
-        </button>
-      </div>
-    </div>
-
-    <!-- NAV MOBILE (se abre con la hamburguesa) -->
-    <nav class="gp-nav-mobile" id="gpMobileNav" aria-label="Navegación mobile">
-      <a href="./pages/quiero-jugar.html">Quiero jugar</a>
-      <a href="./pages/score.html">Quiero marcar</a>
-      <a href="#como-funciona">¿Cómo funciona?</a>
-      <a href="./pages/canchas-ligas.html">Canchas o Ligas</a>
-      <a href="./pages/contacto.html">Contacto</a>
-    </nav>
+  <!-- HEADER BLANCO COMO JUGADORES -->
+  <header class="gp-entrada-header">
+    <a href="index.html" aria-label="Inicio GPADEL">
+      <img
+        src="img/gpadel-logo.svg"
+        alt="GPADEL - Plataforma de gestión de pádel"
+        class="gp-entrada-logo"
+      />
+    </a>
   </header>
 
-  <!-- MAIN CONTENT -->
-  <main>
-    <!-- Barra de búsqueda -->
-    <section class="gp-search-bar-wrapper" aria-label="Búsqueda de canchas">
-      <div class="gp-container">
-        <div class="gp-search-bar">
-          <div class="gp-search-field">
-            <span class="gp-search-label">¿Dónde?</span>
-            <span class="gp-search-placeholder">Poné la ciudad y explorá las canchas</span>
-          </div>
+  <!-- CONTENIDO -->
+  <main class="gp-entrada-wrapper">
 
-          <div class="gp-search-field">
-            <span class="gp-search-label">Fecha</span>
-            <span class="gp-search-placeholder">¿Qué día?</span>
-          </div>
+    <h1 class="gp-entrada-title">¿Cómo querés usar GPADEL?</h1>
 
-          <div class="gp-search-field">
-            <span class="gp-search-label">Hora</span>
-            <span class="gp-search-placeholder">¿En qué rango horario?</span>
-          </div>
+    <div class="gp-entrada-options">
 
-          <button class="gp-search-btn" type="button" aria-label="Buscar canchas">
-            <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
-          </button>
-        </div>
-      </div>
-    </section>
+      <!-- JUGADORES -->
+      <a href="pages/jugadores.html" class="gp-entrada-card gp-entrada-card--blue">
+        <h2>Jugadores</h2>
+        <p>Reservá canchas, jugá partidos y llevá el score.</p>
+        <span class="gp-entrada-btn">Ingresar</span>
+      </a>
 
-    <!-- HERO -->
-    <section id="hero" class="gp-hero">
-      <div class="gp-container gp-hero-inner">
-        <!-- Texto -->
-        <div class="gp-hero-text">
-          <h1>
-            Reservá, jugá y llevá<br />
-            el score a tus partidos
-          </h1>
+      <!-- LIGAS Y CANCHAS -->
+      <a href="pages/canchas-ligas.html" class="gp-entrada-card gp-entrada-card--green">
+        <h2>Ligas & Canchas</h2>
+        <p>Gestioná turnos, ligas, partidos y jugadores.</p>
+        <span class="gp-entrada-btn">Ingresar</span>
+      </a>
 
-          <p>
-            La forma más simple de organizar tus partidos, reservar turnos y llevar
-            control de cada uno de ellos desde una sola plataforma.
-          </p>
+    </div>
 
-          <div class="gp-hero-cta">
-            <a href="./pages/quiero-jugar.html" class="gp-btn gp-btn--primary">Quiero jugar</a>
-            <a href="./pages/score.html" class="gp-btn gp-btn--secondary">Quiero marcar</a>
-          </div>
-        </div>
-
-        <!-- Imagen -->
-        <div class="gp-hero-image">
-          <img src="img/img-pelota-gpadel.png" alt="Pelota de pádel" />
-        </div>
-      </div>
-    </section>
-
-    <!-- CÓMO FUNCIONA -->
-    <section id="como-funciona" class="gp-section">
-      <div class="gp-container">
-        <h2 class="gp-section-title">¿Cómo funciona?</h2>
-
-        <div class="gp-steps">
-          <article class="gp-step">
-            <div class="gp-step-icon">
-              <img src="img/icon-buscar.svg" alt="Icono buscar" />
-            </div>
-            <div class="gp-step-card">
-              <h3>Buscá la cancha</h3>
-              <p>Elegí la ciudad y encontrá canchas disponibles cerca tuyo.</p>
-            </div>
-          </article>
-
-          <article class="gp-step">
-            <div class="gp-step-icon">
-              <img src="img/icon-reservar.svg" alt="Icono reservar" />
-            </div>
-            <div class="gp-step-card">
-              <h3>Reservá la que desees</h3>
-              <p>Definí día, horario y confirmá tu reserva en pocos clics.</p>
-            </div>
-          </article>
-
-          <article class="gp-step">
-            <div class="gp-step-icon">
-              <img src="img/icon-cancha.svg" alt="Icono cancha" />
-            </div>
-            <div class="gp-step-card">
-              <h3>Usá el score</h3>
-              <p>Controlá tu partido en vivo y guardá estadísticas.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- TESTIMONIOS -->
-    <section class="gp-section gp-section--light" aria-label="Testimonios de usuarios">
-      <div class="gp-container">
-        <h2 class="gp-section-title">Nuestros usuarios comentan</h2>
-
-          <div class="gp-testimonial-wrapper">
-            <button class="gp-testimonial-arrow" id="gpTestPrev" type="button" aria-label="Anterior">‹</button>
-
-            <article class="gp-testimonial" aria-live="polite">
-              <p class="gp-testimonial-text" id="gpTestText"></p>
-
-              <div class="gp-testimonial-footer">
-                <div class="gp-testimonial-user">
-                  <div class="gp-avatar"></div>
-                  <div>
-                    <div class="gp-testimonial-name" id="gpTestName"></div>
-                    <div class="gp-testimonial-cat" id="gpTestCat"></div>
-                  </div>
-                </div>
-                <div class="gp-testimonial-stars" id="gpTestStars"></div>
-              </div>
-            </article>
-
-            <button class="gp-testimonial-arrow" id="gpTestNext" type="button" aria-label="Siguiente">›</button>
-          </div>
-
-      </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="gp-cta-band" aria-label="Contacto por WhatsApp">
-      <div class="gp-container-min gp-cta-inner">
-        <div>
-          <h3>Tienes dudas o necesitas ayuda</h3>
-          <p>Escríbenos, nos contactaremos a la brevedad.</p>
-        </div>
-
-        <a
-          href="https://wa.me/5492494521418"
-          class="gp-btn gp-btn--primary gp-btn--rounded"
-          target="_blank"
-          rel="noopener"
-        >
-          Whatsapp
-        </a>
-      </div>
-    </section>
   </main>
-
-  <!-- FOOTER -->
-  <footer class="gp-footer">
-    <div class="gp-footer-top gp-container">
-      <!-- WhatsApp -->
-      <a
-        href="https://wa.me/5492494521418"
-        target="_blank"
-        rel="noopener"
-        class="gp-footer-block gp-footer-link"
-      >
-        <i class="fa-brands fa-whatsapp gp-footer-icon" aria-hidden="true"></i>
-        <span class="gp-footer-text">+54 9 249 4521418</span>
-      </a>
-
-      <!-- Email -->
-      <a href="mailto:info@gpadel.com.ar" class="gp-footer-block gp-footer-link">
-        <i class="fa-regular fa-envelope gp-footer-icon" aria-hidden="true"></i>
-        <span class="gp-footer-text">info@gpadel.com.ar</span>
-      </a>
-
-      <!-- Dirección -->
-      <a
-        href="https://maps.app.goo.gl/JvontvXCzVbkZqmRA"
-        target="_blank"
-        rel="noopener"
-        class="gp-footer-block gp-footer-link"
-      >
-        <i class="fa-solid fa-map-location-dot gp-footer-icon" aria-hidden="true"></i>
-        <span class="gp-footer-text">
-          Alem 1015 – Tandil<br />
-          Buenos Aires – Argentina
-        </span>
-      </a>
-    </div>
-
-    <!-- Redes -->
-    <div class="gp-footer-social" aria-label="Redes sociales">
-      <a href="https://facebook.com/geneoscoop" target="_blank" rel="noopener" aria-label="Facebook">
-        <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
-      </a>
-      <a href="https://instagram.com/geneos.coop" target="_blank" rel="noopener" aria-label="Instagram">
-        <i class="fa-brands fa-instagram" aria-hidden="true"></i>
-      </a>
-      <a href="https://twitter.com/GeneosCoop" target="_blank" rel="noopener" aria-label="X">
-        <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
-      </a>
-      <a
-        href="https://www.linkedin.com/company/geneoscoop/"
-        target="_blank"
-        rel="noopener"
-        aria-label="LinkedIn"
-      >
-        <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
-      </a>
-    </div>
-
-    <div class="gp-footer-bottom">
-      DISEÑADO POR COOPERATIVA GENEOS LTDA.
-    </div>
-  </footer>
-
-<script src="js/main.js"></script>
 
 </body>
 </html>
