@@ -46,6 +46,7 @@ armé un container-min para reducirlo en algunas secciones que deseaba*/
 
 /* Estilo del HEADER ------------------------------------------------ */
 
+
 .gp-header {
   position: sticky;
   top: 0; /* Con top/arriba + sticky pude dejar fijo el header al hacer scroll */
@@ -158,6 +159,8 @@ y busque botones en otras páginas pero aun no me funciona bien*/
   background: #f3f4ff;
   border: 1px solid var(--gp-white-dark);
   cursor: pointer;
+  position: relative;
+  z-index: 1100;
 }
 
 .gp-header-burger i {
@@ -269,9 +272,23 @@ y busque botones en otras páginas pero aun no me funciona bien*/
   border-radius: 999px;
   width: 40px;
   height: 40px;
+  min-width: 40px;
+  min-height: 40px;
   font-size: 1.2rem;
   cursor: pointer; /*  manito para hacer clic */ 
   flex-shrink: 0; /* para que no se deforme */ 
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;     
+  margin-left: auto; 
+  padding: 0;      
+  line-height: 1;
+}
+
+.gp-search-btn i {
+  font-size: 20px;
+  line-height: 1;
 }
 
 /* HERO ------------------------------------------------- */
@@ -738,10 +755,6 @@ y busque botones en otras páginas pero aun no me funciona bien*/
 }
 
 
-
-
-
-
 /* == ESTILO PARA LA PÁGINA DE CONTACTO == */
 
 .gp-pages-hero {
@@ -1076,3 +1089,285 @@ body.gp-entrada{
     grid-template-columns: 1fr;
   }
 }
+
+
+/* =========================================
+   SEARCH
+========================================= */
+.gp-search-airbnb { position: relative; }
+
+.gp-search-item {
+  position: relative;
+  flex: 1;
+  padding: 8px 14px;
+  cursor: pointer;
+}
+.gp-search-item:hover {
+  background: var(--gp-bg);
+  border-radius: 999px;
+}
+.gp-search-value {
+  font-size: 0.85rem;
+  color: var(--gp-blue-text);
+}
+
+.gp-search-panel {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: calc(100% + 14px);
+  width: min(520px, 92vw);
+  background: #fff;
+  border-radius: 28px;
+  box-shadow: 0 22px 60px rgba(15, 23, 42, 0.22);
+  padding: 18px;
+  z-index: 30;
+}
+
+.gp-search-item.active .gp-search-panel { display: block; }
+
+.gp-search-input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 12px;
+  border-radius: 18px;
+  border: 1px solid var(--gp-white-dark);
+  font-family: inherit;
+}
+
+.gp-search-suggestions{
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+  max-height: 240px;
+  overflow: auto;
+}
+.gp-search-suggestions li{
+  padding: 10px 12px;
+  border-radius: 14px;
+  cursor: pointer;
+}
+.gp-search-suggestions li:hover{
+  background: var(--gp-bg);
+}
+
+.gp-time-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+.gp-time-input { flex: 1; border-radius: 32px; }
+.gp-add-time {
+  background: none;
+  border: none;
+  color: var(--gp-blue);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* =========================================================
+   FLATPICKR
+========================================================= */
+.flatpickr-day.selected,
+.flatpickr-day.selected:hover,
+.flatpickr-day.selected:focus,
+.flatpickr-day.startRange,
+.flatpickr-day.endRange,
+.flatpickr-day.inRange {
+  background: var(--gp-blue) !important;
+  border-color: var(--gp-blue) !important;
+  color: #fff !important;
+}
+
+.flatpickr-day.today {
+  border-color: var(--gp-blue) !important;
+}
+
+.flatpickr-day:hover {
+  background: rgba(0, 91, 165, 0.12) !important;
+  border-color: rgba(0, 91, 165, 0.12) !important;
+}
+
+.flatpickr-current-month,
+.flatpickr-months .flatpickr-next-month,
+.flatpickr-months .flatpickr-prev-month {
+  color: var(--gp-blue) !important;
+  fill: var(--gp-blue) !important;
+}
+
+
+
+/* =========================================
+   SEARCH RESPONSIVE
+========================================= */
+
+/* Botón compacto (mobile) */
+.gp-search-compact{
+  display:none;
+  width:100%;
+  border:0;
+  background: var(--gp-white);
+  border-radius: 999px;
+  padding: 14px 18px;
+  box-shadow: 0 14px 35px rgba(15, 23, 42, 0.12);
+  border: 2px solid var(--gp-green);
+  font-weight: 700;
+  cursor: pointer;
+  align-items:center;
+  gap:10px;
+  justify-content:center;
+    max-width: 100%;
+  margin: 0 auto;
+}
+
+
+.gp-search-compact i{
+  color: var(--gp-blue-dark);
+}
+
+/* Panel expandido */
+.gp-search-expand{
+  position: relative;
+}
+.gp-search-expand-head{
+  display:none;
+  align-items:center;
+  justify-content:space-between;
+  padding: 12px 6px 10px;
+}
+.gp-search-close{
+  border:0;
+  background: var(--gp-white);
+  width:40px;
+  height:40px;
+  border-radius: 999px;
+  box-shadow: 0 8px 24px rgba(15,23,42,.12);
+  cursor:pointer;
+}
+
+/* Footer buscar (mobile) */
+.gp-search-expand-foot{
+  display:none;
+  padding: 14px 6px 0;
+}
+.gp-search-btn--mobile{
+  width:100%;
+  height:52px;
+  border-radius: 18px;
+  font-weight: 800;
+  text-transform: none;
+}
+
+/* Desktop: se ve la barra normal */
+.gp-search-btn--desktop{ display:inline-flex; }
+
+/* MOBILE behavior */
+@media (max-width: 800px){
+  /* mostrar botón compacto */
+  .gp-search-compact{ display:flex; margin:20px;}
+
+  /* ocultar el panel expandido por defecto */
+  .gp-search-expand{ display:none; }
+
+  /* cuando abre */
+  .gp-search-expand.is-open{
+    display:block;
+    background: var(--gp-white);
+    border-radius: 24px;
+    padding: 10px 14px 14px;
+    box-shadow: 0 22px 60px rgba(15,23,42,.20);
+  }
+
+  .gp-search-expand-head{ display:flex; }
+  .gp-search-expand-foot{ display:block; }
+
+  /* barra en columna */
+  .gp-search-bar.gp-search-airbnb{
+    flex-direction: column;
+    border-radius: 24px;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  /* cada ítem como fila */
+  .gp-search-item{
+    width:100%;
+    border:1px solid var(--gp-white-dark);
+    border-radius: 18px;
+    padding: 12px 14px;
+    background: var(--gp-white);
+  }
+
+  /* en mobile NO queremos panel flotante: lo mostramos inline */
+  .gp-search-panel{
+    position: static;
+    width: 100%;
+    box-shadow: none;
+    padding: 12px 0 0;
+    border-radius: 0;
+  }
+
+  /* se abre solo cuando está active */
+  .gp-search-item.active .gp-search-panel{ display:block; }
+  .gp-search-item .gp-search-panel{ display:none; }
+
+  /* ocultar lupa dentro de barra en mobile */
+  .gp-search-btn--desktop{ display:none; }
+}
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+@media (max-width: 800px) {
+    .gp-search-bar-wrapper .gp-container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .gp-search-compact {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* MENU MOBILE: colores y hover */
+.gp-nav-mobile {
+  background: #fff;
+  border: 2px solid var(--gp-green);
+  padding: 0;
+}
+
+.gp-nav-mobile a {
+  color: var(--gp-blue-text);
+  display: block;
+  padding: 18px 24px; 
+  margin: 0; 
+}
+
+.gp-nav-mobile a + a {
+  border-top: 1px solid var(--gp-green);
+}
+
+/* Hover: verde lima */
+.gp-nav-mobile a:hover {
+  background: var(--gp-green);
+  color: var(--gp-blue-text);
+}
+
+/* MENU MOBILE – bordes redondeados según posición */
+.gp-nav-mobile a:first-child:hover {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.gp-nav-mobile a:last-child:hover {
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
