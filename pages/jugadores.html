@@ -19,6 +19,11 @@
 
   <!-- Estilos propios -->
   <link rel="stylesheet" href="../css/style.css" />
+
+  <!-- Color input search -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  
+
 </head>
 
 <body>
@@ -71,28 +76,79 @@
 <!-- SEARCH -->
 <section class="gp-search-bar-wrapper">
   <div class="gp-container">
-    <div class="gp-search-bar">
-      <div class="gp-search-field">
-        <span class="gp-search-label">¿Dónde?</span>
-        <span class="gp-search-placeholder">Ciudad</span>
+
+    <!-- BOTÓN COMPACTO (solo mobile) -->
+    <button class="gp-search-compact" id="gpSearchOpen" type="button" aria-label="Reservar cancha">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <span>Reservar cancha</span>
+    </button>
+
+    <!-- PANEL EXPANDIDO (desktop siempre visible / mobile se abre al click) -->
+    <div class="gp-search-expand" id="gpSearchExpand" aria-hidden="true">
+
+      <div class="gp-search-expand-head">
+        <strong>Reservar cancha</strong>
+        <button class="gp-search-close" id="gpSearchClose" type="button" aria-label="Cerrar">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
       </div>
 
-      <div class="gp-search-field">
-        <span class="gp-search-label">Fecha</span>
-        <span class="gp-search-placeholder">¿Qué día?</span>
+      <div class="gp-search-bar gp-search-airbnb">
+
+        <!-- DONDE -->
+        <div class="gp-search-item" data-field="city">
+          <span class="gp-search-label">¿Dónde?</span>
+          <span class="gp-search-value" id="cityValue">Ciudad</span>
+
+          <div class="gp-search-panel" id="cityPanel">
+            <input type="text" placeholder="Ingresá una ciudad" class="gp-search-input" id="cityInput" />
+            <ul class="gp-search-suggestions" id="citySuggestions"></ul>
+          </div>
+        </div>
+
+        <!-- FECHA -->
+        <div class="gp-search-item" data-field="date">
+          <span class="gp-search-label">Fecha</span>
+          <span class="gp-search-value" id="dateValue">¿Qué día?</span>
+
+          <div class="gp-search-panel" id="datePanel">
+            <input type="date" id="dateInput" class="gp-search-input" />
+          </div>
+        </div>
+
+        <!-- HORA -->
+        <div class="gp-search-item" data-field="time">
+          <span class="gp-search-label">Hora</span>
+          <span class="gp-search-value" id="timeValue">Horario</span>
+
+          <div class="gp-search-panel" id="timePanel">
+            <div class="gp-time-row">
+              <input type="time" class="gp-time-input" step="1800">
+              <span>–</span>
+              <input type="time" class="gp-time-input" step="1800">
+            </div>
+            <button type="button" class="gp-add-time">+ Agregar horario</button>
+          </div>
+        </div>
+
+        <!-- Botón lupa (desktop) -->
+        <button class="gp-search-btn gp-search-btn--desktop" type="button" aria-label="Buscar">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+
       </div>
 
-      <div class="gp-search-field">
-        <span class="gp-search-label">Hora</span>
-        <span class="gp-search-placeholder">Horario</span>
+      <!-- Footer tipo Airbnb (solo mobile) -->
+      <div class="gp-search-expand-foot">
+        <button class="gp-search-btn gp-search-btn--mobile" type="button">
+          <i class="fa-solid fa-magnifying-glass"></i> Buscar
+        </button>
       </div>
 
-      <button class="gp-search-btn">
-        <i class="fa-solid fa-magnifying-glass"></i>
-      </button>
     </div>
   </div>
 </section>
+
 
 <!-- HERO -->
 <section id="hero" class="gp-hero">
@@ -165,6 +221,10 @@
   </div>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/es.js"></script>
+
 <script src="../js/main.js"></script>
+
 </body>
 </html>
