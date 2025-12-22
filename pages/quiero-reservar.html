@@ -7,6 +7,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Color input search -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
 </head>
 <body>
   
@@ -54,9 +58,224 @@
   <!-- HERO CONTACTO (similar a Geneos, texto + bajada) Arme un hero generico para paginas-->
   <section class="gp-pages-hero">
     <div class="gp-container">
-      <h1>Quiero reservar</h1>
+      <h1>Quiero reservar cancha</h1>
     </div>
   </section>
+
+
+  <!-- SEARCH -->
+    <section class="gp-search-bar-wrapper">
+      <div class="gp-container">
+
+        <!-- BOTÓN COMPACTO (solo mobile) -->
+        <button class="gp-search-compact" id="gpSearchOpen" type="button" aria-label="Reservar cancha">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <span>Reservar cancha</span>
+        </button>
+
+        <!-- PANEL EXPANDIDO (desktop siempre visible / mobile se abre al click) -->
+        <div class="gp-search-expand" id="gpSearchExpand" aria-hidden="true">
+
+          <div class="gp-search-expand-head">
+            <strong>Reservar cancha</strong>
+            <button class="gp-search-close" id="gpSearchClose" type="button" aria-label="Cerrar">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+
+          <div class="gp-search-bar gp-search-airbnb">
+
+            <!-- DONDE -->
+            <div class="gp-search-item" data-field="city">
+              <span class="gp-search-label">¿Dónde?</span>
+              <span class="gp-search-value" id="cityValue">Ciudad</span>
+
+              <div class="gp-search-panel" id="cityPanel">
+                <input type="text" placeholder="Ingresá una ciudad" class="gp-search-input" id="cityInput" />
+                <ul class="gp-search-suggestions" id="citySuggestions"></ul>
+              </div>
+            </div>
+
+            <!-- FECHA -->
+            <div class="gp-search-item" data-field="date">
+              <span class="gp-search-label">Fecha</span>
+              <span class="gp-search-value" id="dateValue">¿Qué día?</span>
+
+              <div class="gp-search-panel" id="datePanel">
+                <input type="date" id="dateInput" class="gp-search-input" />
+              </div>
+            </div>
+
+            <!-- HORA -->
+            <div class="gp-search-item" data-field="time">
+              <span class="gp-search-label">Hora</span>
+
+                <div class="gp-time-row">
+                    <input type="text" class="gp-time-input fp-time" placeholder="Hora inicio">
+                    <span>–</span>
+                    <input type="text" class="gp-time-input fp-time" placeholder="Hora fin">
+                </div>
+
+
+            </div>
+
+            <!-- Botón lupa (desktop) -->
+            <button class="gp-search-btn gp-search-btn--desktop" type="button" aria-label="Buscar">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+
+          </div>
+
+          <!-- RESULTADOS -->
+          <section class="gp-results">
+            <div class="gp-container">
+
+              <!-- TÍTULO -->
+              <div class="gp-results-head">
+                <h2>Canchas disponibles para esta fecha</h2>
+              </div>
+
+              <!-- GRID DE CANCHAS -->
+              <div class="gp-courts-grid">
+
+                <!-- CARD CANCHA 1 -->
+                <article class="gp-court-card">
+                  <div class="gp-court-img">
+                    <img src="../img/canchas/cancha1.png" alt="Cancha de pádel en Mar del Plata">
+                    <button class="gp-court-fav" aria-label="Guardar en favoritos">
+                      <i class="fa-regular fa-heart"></i>
+                    </button>
+                  </div>
+
+                  <div class="gp-court-info">
+                    <h3>Matchpoint</h3>
+                    <p class="gp-court-city">Mar del Plata</p>
+
+                    <div class="gp-court-meta">
+                      <span>Turno 1hs</span>
+                      <strong>$ 8.000</strong>
+                    </div>
+                  </div>
+                </article>
+
+                <!-- CARD CANCHA 2 -->
+                <article class="gp-court-card">
+                  <div class="gp-court-img">
+                    <img src="../img/canchas/cancha2.png" alt="Cancha de pádel en Tandil">
+                    <button class="gp-court-fav">
+                      <i class="fa-regular fa-heart"></i>
+                    </button>
+                  </div>
+
+                  <div class="gp-court-info">
+                    <h3>Suma</h3>
+                    <p class="gp-court-city">San Cayetano</p>
+
+                    <div class="gp-court-meta">
+                      <span>Turno 1.30hs</span>
+                      <strong>$ 12.000</strong>
+                    </div>
+                  </div>
+                </article>
+
+                <!-- CARD CANCHA 3 -->
+                <article class="gp-court-card">
+                  <div class="gp-court-img">
+                    <img src="../img/canchas/cancha3.png" alt="Cancha de pádel en Mar del Plata">
+                    <button class="gp-court-fav" aria-label="Guardar en favoritos">
+                      <i class="fa-regular fa-heart"></i>
+                    </button>
+                  </div>
+
+                  <div class="gp-court-info">
+                    <h3>Central Pádel</h3>
+                    <p class="gp-court-city">Mar del Plata</p>
+
+                    <div class="gp-court-meta">
+                      <span>Turno 1hs</span>
+                      <strong>$ 8.000</strong>
+                    </div>
+                  </div>
+                </article>
+
+                <!-- CARD CANCHA 4-->
+                <article class="gp-court-card">
+                  <div class="gp-court-img">
+                    <img src="../img/canchas/cancha4.png" alt="Cancha de pádel en Tandil">
+                    <button class="gp-court-fav">
+                      <i class="fa-regular fa-heart"></i>
+                    </button>
+                  </div>
+
+                  <div class="gp-court-info">
+                    <h3>Pádel Norte</h3>
+                    <p class="gp-court-city">Tandil</p>
+
+                    <div class="gp-court-meta">
+                      <span>Turno 1:30hs</span>
+                      <strong>$ 12.000</strong>
+                    </div>
+                  </div>
+                </article>
+
+                <!-- CARD CANCHA 5 -->
+                <article class="gp-court-card">
+                  <div class="gp-court-img">
+                    <img src="../img/canchas/cancha5.png" alt="Cancha de pádel en Mar del Plata">
+                    <button class="gp-court-fav" aria-label="Guardar en favoritos">
+                      <i class="fa-regular fa-heart"></i>
+                    </button>
+                  </div>
+
+                  <div class="gp-court-info">
+                    <h3>PointPádel</h3>
+                    <p class="gp-court-city">Orense</p>
+
+                    <div class="gp-court-meta">
+                      <span>Turno 1hs</span>
+                      <strong>$ 8.000</strong>
+                    </div>
+                  </div>
+                </article>
+
+                <!-- CARD CANCHA 6 -->
+                <article class="gp-court-card">
+                  <div class="gp-court-img">
+                    <img src="../img/canchas/cancha6.png" alt="Cancha de pádel en Tandil">
+                    <button class="gp-court-fav">
+                      <i class="fa-regular fa-heart"></i>
+                    </button>
+                  </div>
+
+                  <div class="gp-court-info">
+                    <h3>Faro Verde</h3>
+                    <p class="gp-court-city">Tandil</p>
+
+                    <div class="gp-court-meta">
+                      <span>Turno 1:30hs</span>
+                      <strong>$ 12.000</strong>
+                    </div>
+                  </div>
+                </article>
+
+              </div>
+
+            </div>
+          </section>
+
+
+
+
+          <!-- Footer tipo Airbnb (solo mobile) -->
+          <div class="gp-search-expand-foot">
+            <button class="gp-search-btn gp-search-btn--mobile" type="button">
+              <i class="fa-solid fa-magnifying-glass"></i> Buscar
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </section>
 
       <!-- FOOTER (igual que index) -->
   <footer class="gp-footer">
@@ -96,6 +315,11 @@
       DISEÑADO POR COOPERATIVA GENEOS LTDA.
     </div>
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/es.js"></script>
+
+  <script src="../js/main.js"></script>
 
   </body>
 </html>

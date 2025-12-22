@@ -1452,3 +1452,133 @@ body.gp-entrada{
   font-size: 18px !important;
   font-weight: 700 !important;
 }
+
+
+/* ===============================
+   RESULTADOS – CANCHAS
+=============================== */
+
+.gp-results {
+  padding: 40px 0 60px;
+  background: var(--gp-bg);
+}
+
+.gp-results-head h2 {
+  font-size: 1.6rem;
+  color: var(--gp-blue-dark);
+  margin-bottom: 26px;
+}
+
+/* Grid */
+.gp-courts-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* 🔥 6 cards fijas */
+  gap: 20px;
+}
+
+/* Card */
+.gp-court-card {
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.gp-court-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.15);
+}
+
+/* Imagen */
+.gp-court-img {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.gp-court-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Favorito */
+.gp-court-fav {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255,255,255,.9);
+  cursor: pointer;
+}
+
+.gp-court-fav i {
+  font-size: 1rem;
+  color: #111;
+}
+
+/* Info */
+.gp-court-info {
+  padding: 14px 16px 16px;
+}
+
+.gp-court-info h3 {
+  font-size: 1rem;
+  margin: 0 0 4px;
+}
+
+.gp-court-city {
+  font-size: .8rem;
+  color: var(--gp-muted);
+  margin-bottom: 10px;
+}
+
+/* Precio */
+.gp-court-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: .85rem;
+}
+
+.gp-court-meta strong {
+  font-size: .95rem;
+}
+
+/* Tablets grandes */
+@media (max-width: 1400px) {
+  .gp-courts-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .gp-courts-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .gp-courts-grid {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 72%; /* 👈 tamaño card */
+    overflow-x: auto;
+    gap: 14px;
+    padding-bottom: 10px;
+    scroll-snap-type: x mandatory;
+  }
+
+  .gp-court-card {
+    scroll-snap-align: start;
+  }
+}
+
+
+
