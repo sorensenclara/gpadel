@@ -1371,3 +1371,33 @@ body.gp-entrada{
   border-bottom-right-radius: 20px;
 }
 
+/* ===============================
+   Search MOBILE
+=============================== */
+@media (max-width: 800px) {
+
+  /* contenedor interno del item */
+  .gp-search-item {
+    background: transparent;
+  }
+
+  /* panel interno (donde aparece el input) */
+  .gp-search-panel {
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  /* input de ciudad (sin cápsula gris grande) */
+  .gp-search-input {
+    background: #fff;
+    border-radius: 999px;
+  }
+
+  /* eliminar pseudo-fondos si existen */
+  .gp-search-item::before,
+  .gp-search-item::after {
+    display: none !important;
+    content: none !important;
+  }
+}
