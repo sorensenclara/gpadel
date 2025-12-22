@@ -23,6 +23,7 @@
   <!-- Color input search -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
   
+  
 
 </head>
 
@@ -119,16 +120,14 @@
         <!-- HORA -->
         <div class="gp-search-item" data-field="time">
           <span class="gp-search-label">Hora</span>
-          <span class="gp-search-value" id="timeValue">Horario</span>
 
-          <div class="gp-search-panel" id="timePanel">
             <div class="gp-time-row">
-              <input type="time" class="gp-time-input" step="1800">
-              <span>–</span>
-              <input type="time" class="gp-time-input" step="1800">
+                <input type="text" class="gp-time-input fp-time" placeholder="Hora inicio">
+                <span>–</span>
+                <input type="text" class="gp-time-input fp-time" placeholder="Hora fin">
             </div>
-            <button type="button" class="gp-add-time">+ Agregar horario</button>
-          </div>
+
+
         </div>
 
         <!-- Botón lupa (desktop) -->
