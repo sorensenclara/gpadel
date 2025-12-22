@@ -171,60 +171,52 @@
 
 
 // ===============================
-// HORARIOS – SOLO 00 o 30 (1h / 1.30h) COMO PADEL
+// HORARIOS – FLATPICKR SOLO 00 / 30
 // ===============================
 (function () {
-  const timePanel = document.getElementById("timePanel");
-  const addBtn = document.querySelector(".gp-add-time");
+  function initTimePickers(context = document) {
+    context.querySelectorAll(".fp-time").forEach((input) => {
+      if (input._flatpickr) return;
 
-  if (!timePanel || !addBtn) return;
+      const panel = input.closest(".gp-search-panel") || document.body;
 
-  function normalize(input) {
-    if (!input.value) return;
+      flatpickr(input, {
+        enableTime: true,
+        noCalendar: true,
+        dateFormat: "H:i",
+        time_24hr: true,
+        minuteIncrement: 30,
+        disableMobile: true,
 
-    let [h, m] = input.value.split(":").map(Number);
-    if (isNaN(h) || isNaN(m)) return;
-
-    // Forzar 00 o 30
-    if (m < 15) m = 0;
-    else if (m < 45) m = 30;
-    else {
-      m = 0;
-      h = (h + 1) % 24;
-    }
-
-    input.value =
-      String(h).padStart(2, "0") +
-      ":" +
-      String(m).padStart(2, "0");
-  }
-
-  function attach(row) {
-    row.querySelectorAll(".gp-time-input").forEach(input => {
-      // Refuerzo por si el browser ignora step
-      input.setAttribute("step", "1800");
-
-      input.addEventListener("change", () => normalize(input));
-      input.addEventListener("blur", () => normalize(input));
+        // 👇 para que el popup se “enganche” al panel y no se vaya a cualquier lado
+        appendTo: panel,
+        position: "below left",
+      });
     });
   }
 
-  // Inicial
-  document.querySelectorAll(".gp-time-row").forEach(attach);
+  initTimePickers();
 
-  // Agregar nuevo rango
-  addBtn.addEventListener("click", () => {
-    const row = document.createElement("div");
-    row.className = "gp-time-row";
-    row.innerHTML = `
-      <input type="time" class="gp-time-input" step="1800">
-      <span>–</span>
-      <input type="time" class="gp-time-input" step="1800">
-    `;
-    timePanel.prepend(row);
-    attach(row);
-  });
+  const addBtn = document.querySelector(".gp-add-time");
+  const timePanel = document.getElementById("timePanel");
+
+  if (addBtn && timePanel) {
+    addBtn.addEventListener("click", () => {
+      const row = document.createElement("div");
+      row.className = "gp-time-row";
+      row.innerHTML = `
+        <input type="text" class="gp-time-input fp-time" placeholder="Hora inicio">
+        <span>–</span>
+        <input type="text" class="gp-time-input fp-time" placeholder="Hora fin">
+      `;
+      timePanel.prepend(row);
+      initTimePickers(row);
+    });
+  }
 })();
+
+
+
 
 
 // ===============================
