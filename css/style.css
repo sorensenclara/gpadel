@@ -79,26 +79,39 @@ armé un container-min para reducirlo en algunas secciones que deseaba*/
 /* Estilo del  Nav desktop */
 
 .gp-nav {
-  display: flex; /* menu uno al lado del otro, una misma fila */
+  display: flex;
   gap: 24px;
   font-size: 0.85rem;
-  text-transform: uppercase; /* texto a mayuscula */
+  text-transform: uppercase;
 }
 
 .gp-nav-link {
   position: relative;
   text-decoration: none;
-  color:var(--gp-text);
+  color: #4b5563;
   font-weight: 600;
   padding-bottom: 4px;
 }
 
-.gp-nav :hover{
-  color:var(--gp-green-dark);
+.gp-nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: var(--gp-green);
+  border-radius: 999px; 
+  transition: width 0.2s ease;
+}
+
+.gp-nav-link:hover::after,
+.gp-nav-link--active::after {
+  width: 100%;
 }
 
 .gp-nav-link--active {
-  color: var(--gp-green-dark);
+  color: var(--gp-text);
 }
 
 /* Acciones header */
@@ -1155,7 +1168,6 @@ body.gp-entrada{
   display: flex;
   align-items: center;
   gap: 6px;
-  margin-bottom: 10px;
 }
 .gp-time-input { flex: 1; border-radius: 32px; }
 .gp-add-time {
@@ -1400,4 +1412,43 @@ body.gp-entrada{
     display: none !important;
     content: none !important;
   }
+}
+
+
+.gp-search-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* HORA – layout */
+.gp-time-row{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.gp-time-input{
+  width: 72px;          /* tamaño parejo */
+  border: 0 !important; /* sin borde */
+  background: transparent !important;
+  padding: 0 !important;
+  outline: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--gp-blue-text);
+}
+
+/* Popup de flatpickr más chico y prolijo */
+.flatpickr-calendar.hasTime.noCalendar{
+  width: 220px !important;
+  border-radius: 16px !important;
+  box-shadow: 0 18px 50px rgba(15, 23, 42, 0.22) !important;
+}
+.flatpickr-time{
+  height: 48px !important;
+}
+.flatpickr-time input{
+  font-size: 18px !important;
+  font-weight: 700 !important;
 }
