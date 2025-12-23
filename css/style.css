@@ -1290,15 +1290,32 @@ body.page-construction {
   flex-direction: column;
 }
 
+/* ===== score modalidad GPADEL ===== */
+/* Layout vertical de opciones */
+.gp-modalidad-opciones {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.gp-opcion-item {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 16px 20px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+
 .gp-main {
   flex: 1;
   display: flex;
   flex-direction: column;
 }
 
-.gp-pages-hero {
-  flex: 1;
-}
 
 /* ===============================
    RESPONSIVE GENERAL
@@ -1551,4 +1568,21 @@ body.page-construction {
     display: none;
   }
 
-  
+/* ===== SCORE TYPE ===== */
+.gp-pages-hero{
+  padding: 40px 0 60px; /* + aire abajo */
+}
+
+.gp-pages-hero .gp-hero-cta{
+  width: 100%;
+  margin-top: 22px;
+}
+
+.gp-pages-hero .gp-modalidad-opciones{
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.gp-pages-hero .gp-btn{
+  margin-top: 14px;
+}
