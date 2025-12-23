@@ -361,7 +361,7 @@ html, body {
   text-align:center;
   font-weight:700;
   margin:0 0 40px;
-  font-size:1.6rem;
+  font-size:2.5rem;
   color:var(--gp-blue-dark);
 }
 
@@ -769,6 +769,18 @@ html, body {
   .gp-search-item .gp-search-panel{ display:none; }
 
   .gp-search-btn--desktop{ display:none; }
+}
+
+
+
+.gp-kicker {
+  margin: 0 0 10px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+  color: #8a8a8a;
+  text-align: center;
 }
 
 /* ===============================
@@ -1836,4 +1848,92 @@ body.gp-page-torneos .gp-torneo-grid{
   .gp-torneo-grid{ grid-template-columns: 1fr; }
   .gp-filter-actions{ justify-content: stretch; }
   .gp-filter-actions .gp-btn{ width:100%; }
+}
+
+
+/* =========================
+   AUSPICIANTES / SPONSORS
+   ========================= */
+
+.gp-sponsors {
+  background: #fff; /* como en tu captura */
+  text-align: center;
+}
+
+.gp-sponsors-kicker {
+  margin: 0 0 10px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+  color: #8a8a8a;
+}
+
+.gp-sponsors-title {
+  margin: 0 0 26px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  line-height: 1.05;
+  font-size: 2.5rem !important;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  color: #1f2a33;
+}
+
+.gp-sponsors-title-accent {
+  color: var(--gp-green-dark); /* verde "PATROCINADORES" */
+}
+
+/* 5 logos uno al lado del otro (y responsive) */
+.gp-sponsors-logos {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  align-items: center;
+}
+
+@media (max-width: 1024px) {
+  .gp-sponsors-logos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .gp-sponsors-logos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.gp-sponsor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 160px;
+  padding: 20px;
+  border-radius: 14px;
+  text-decoration: none;
+}
+
+
+.gp-sponsor img {
+  max-width: 160px;
+  max-height: 110px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.6;
+  transition: filter 0.25s ease, opacity 0.25s ease, transform 0.25s ease;
+}
+
+.gp-sponsor:hover img {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.08);
+}
+
+@media (max-width: 768px) {
+  .gp-sponsor img {
+    height: 64px;
+  }
 }
