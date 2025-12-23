@@ -123,6 +123,13 @@ html, body {
   font-weight:800;
 }
 
+.gp-nav-mobile-divider{
+  height:1px;
+  background:var(--gp-green);
+  margin:12px 24px;
+  opacity:.6;
+}
+
 .gp-header-actions{
   display:flex;
   align-items:center;
@@ -1543,3 +1550,5 @@ body.page-construction {
   body.gp-page-login .gp-login-hero{
     display: none;
   }
+
+  
