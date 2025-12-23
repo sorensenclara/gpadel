@@ -1581,5 +1581,46 @@ body.gp-entrada{
   }
 }
 
+/* ===============================
+Sitio en construcción
+================================ */
 
+body.page-construction {
+  background: url("../img/bggpadel.png") center center no-repeat;
+  background-size: cover;
+}
 
+.page-construction main {
+  flex-grow: 1;
+}
+
+/* Botón verde GPADEL para sustituir el de boostrap en construccion*/
+.gp-btn-green {
+  background-color: var(--gp-green);
+  border-color: var(--gp-green);
+  color: #000; 
+}
+
+.gp-btn-green:hover,
+.gp-btn-green:focus {
+  background-color: var(--gp-green-dark); 
+  border-color: #9fcf00;
+  color: #000;
+}
+
+/* Score*/
+.gp-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.gp-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.gp-pages-hero {
+  flex: 1;
+}
