@@ -174,21 +174,22 @@
 // HORARIOS – FLATPICKR SOLO 00 / 30
 // ===============================
 (function () {
+  // ✅ Si la página no usa flatpickr, salimos y NO rompemos el resto del main.js
+  if (!window.flatpickr) return;
+
   function initTimePickers(context = document) {
     context.querySelectorAll(".fp-time").forEach((input) => {
       if (input._flatpickr) return;
 
       const panel = input.closest(".gp-search-panel") || document.body;
 
-      flatpickr(input, {
+      window.flatpickr(input, {
         enableTime: true,
         noCalendar: true,
         dateFormat: "H:i",
         time_24hr: true,
         minuteIncrement: 30,
         disableMobile: true,
-
-        // 👇 para que el popup se “enganche” al panel y no se vaya a cualquier lado
         appendTo: panel,
         position: "below left",
       });
@@ -214,9 +215,6 @@
     });
   }
 })();
-
-
-
 
 
 // ===============================
@@ -257,4 +255,69 @@
     const clickedInside = expand.contains(e.target) || openBtn.contains(e.target);
     if (!clickedInside) close();
   });
+})();
+
+// ===============================
+// FILTROS TORNEOS
+// ===============================
+(function () {
+  const yearEl = document.getElementById("filterYear");
+  const monthEl = document.getElementById("filterMonth");
+  const cityEl = document.getElementById("filterCity");
+
+  const btnApply = document.getElementById("btnApplyFilters");
+  const btnClear = document.getElementById("btnClearFilters");
+
+  const grid = document.getElementById("tournamentsGrid");
+  const emptyState = document.getElementById("emptyState");
+  const hint = document.getElementById("gpResultsHint");
+
+  if (!yearEl || !monthEl || !cityEl || !grid) return;
+
+  function applyFilters() {
+    const y = yearEl.value.trim();
+    const m = monthEl.value.trim();
+    const c = cityEl.value.trim();
+
+    const cards = grid.querySelectorAll(".gp-torneo-card");
+    let visibleCount = 0;
+
+    cards.forEach((card) => {
+      const cy = card.getAttribute("data-year") || "";
+      const cm = card.getAttribute("data-month") || "";
+      const cc = card.getAttribute("data-city") || "";
+
+      let show = true;
+
+      if (y && cy !== y) show = false;
+      if (m && cm !== m) show = false;
+      if (c && cc !== c) show = false;
+
+      card.style.display = show ? "" : "none";
+      if (show) visibleCount++;
+    });
+
+    if (emptyState) {
+      emptyState.classList.toggle("d-none", visibleCount !== 0);
+    }
+
+    if (hint) {
+      hint.textContent = visibleCount
+        ? `Mostrando ${visibleCount} torneo(s) según tu selección.`
+        : "No hay resultados con esos filtros.";
+    }
+  }
+
+  function clearFilters() {
+    yearEl.value = "";
+    monthEl.value = "";
+    cityEl.value = "";
+    applyFilters();
+  }
+
+  if (btnApply) btnApply.addEventListener("click", applyFilters);
+  if (btnClear) btnClear.addEventListener("click", clearFilters);
+
+  // Aplicar al cargar
+  applyFilters();
 })();
