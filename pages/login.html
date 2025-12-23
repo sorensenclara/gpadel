@@ -26,7 +26,8 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
   
 </head>
-<body>
+
+<body class="gp-page-login">
   
   <!-- NAVBAR -->
   <header class="gp-header">
@@ -70,13 +71,79 @@
     </nav>
   </header>
 
-  <!-- HERO CONTACTO (similar a Geneos, texto + bajada) Arme un hero generico para paginas-->
-  <section class="gp-pages-hero">
+  <!-- HERO-->
+  <section class="gp-pages-hero gp-login-hero">
     <div class="gp-container">
       <h5>ACCESO A LA PLATAFORMA</h5>
       <h1>Inicie Sesión</h1>
     </div>
   </section>
+
+  <!-- LOGIN -->
+  <main class="gp-main gp-login">
+    <div class="gp-container">
+      <div class="gp-login-wrap">
+
+        <div class="gp-login-card">
+          <h2 class="gp-login-title">Ingresar</h2>
+          <p class="gp-login-subtitle">
+            Accedé con tu usuario y contraseña.
+          </p>
+
+          <form class="gp-login-form">
+
+            <div class="gp-login-field">
+              <label for="gpUser">Usuario</label>
+              <input
+                id="gpUser"
+                type="text"
+                autocomplete="username"
+                required
+              />
+            </div>
+
+            <div class="gp-login-field">
+              <label for="gpPass">Contraseña</label>
+              <input
+                id="gpPass"
+                type="password"
+                autocomplete="current-password"
+                required
+              />
+            </div>
+
+            <button type="submit"
+              class="gp-btn gp-btn--primary gp-login-submit">
+              Iniciar sesión
+            </button>
+
+            <div class="gp-login-links">
+              <a href="#" class="gp-login-link">
+                ¿Olvidaste tu contraseña?
+              </a>
+            </div>
+
+            <div class="gp-login-divider">
+              <span>o</span>
+            </div>
+
+            <button type="button" class="gp-login-google">
+              <i class="fa-brands fa-google"></i>
+              Continuar con Google
+            </button>
+
+            <p class="gp-login-bottom">
+              ¿No tenés cuenta?
+              <a href="#" class="gp-login-create">Crear cuenta</a>
+            </p>
+
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
 
   <!-- FOOTER (boostrap) -->
   <footer class="gp-footer bg-black text-white pt-5 pb-4">
@@ -143,18 +210,6 @@
 
   </div>
 </footer>
-
-
-    <!-- Redes sociales -->
-    <div class="gp-footer-social">
-      <a href="https://facebook.com/geneoscoop" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i></a>
-      <a href="https://instagram.com/geneos.coop" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
-      <a href="https://twitter.com/GeneosCoop" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i></a>
-      <a href="https://www.linkedin.com/company/geneoscoop/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i></a>
-    </div>
-
-
-  </footer>
 
   </body>
 </html>
