@@ -896,16 +896,21 @@ html, body {
 }
 
 @media (max-width:640px){
+
   .gp-courts-grid{
     display:grid;
-    grid-auto-flow:column;
-    grid-auto-columns:72%;
-    overflow-x:auto;
+    grid-template-columns:1fr;
     gap:14px;
-    padding-bottom:10px;
-    scroll-snap-type:x mandatory;
   }
-  .gp-court-card{ scroll-snap-align:start; }
+
+  .gp-court-card{
+    width:100%;
+  }
+
+  /* limitar a 4 resultados visibles */
+  .gp-court-card:nth-child(n+5){
+    display:none;
+  }
 }
 
 /* ===============================
@@ -1334,4 +1339,32 @@ body.page-construction {
 
   .gp-testimonial-arrow:first-of-type{ left:-24px; }
   .gp-testimonial-arrow:last-of-type{ right:-24px; }
+}
+
+
+/* ===============================
+   RESULTADOS (CANCHAS MOBILE)
+=============================== */
+@media (max-width: 640px){
+
+  .gp-results{
+    display: block;
+  }
+
+  .gp-courts-grid{
+    display: grid !important;
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  /* asegurar que las cards no queden ocultas por otra regla */
+  .gp-courts-grid > article.gp-court-card{
+    display: block !important;
+    width: 100%;
+  }
+
+  /* limitar a 4 resultados visibles */
+  .gp-courts-grid > article.gp-court-card:nth-of-type(n+5){
+    display: none !important;
+  }
 }
