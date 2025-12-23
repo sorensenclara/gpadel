@@ -23,28 +23,27 @@
 <body class="gp-layout gp-page-score">
 
   <!-- HEADER -->
-  <header class="gp-header">
+<header class="gp-header">
     <div class="gp-container gp-header-inner">
       <a href="../index.html" class="gp-logo-link">
-        <img src="../img/gpadel-logo.svg"
-             alt="GPADÉL - Plataforma de gestión de pádel"
-             class="gp-logo-img">
+        <img src="../img/gpadel-logo.svg" alt="GPADÉL - Plataforma de gestión de pádel" class="gp-logo-img">
       </a>
 
+      <!-- Navegación desktop -->
       <nav class="gp-nav">
-        <a href="reservar-cancha.html" class="gp-nav-link">Reservar Cancha</a>
-        <a href="score.html" class="gp-nav-link gp-nav-link--active">Marcador Gpadel</a>
+        <a href="reservar-cancha.html" class="gp-nav-link gp-nav-link">Reservar Cancha</a>
+        <a href="score.html" class="gp-nav-link--active">Marcador Gpadel</a>
         <a href="inscripcion-torneos.html" class="gp-nav-link">Torneos</a>
         <a href="ayuda-jugadores.html" class="gp-nav-link">Ayuda</a>
         <a href="contacto.html" class="gp-nav-link">Contacto</a>
       </nav>
-
       <div class="gp-header-actions">
         <a href="canchas-ligas.html" class="gp-header-cta">Canchas o Ligas</a>
         <a href="login.html" class="gp-header-icon" aria-label="Iniciar sesión">
           <i class="fa-regular fa-user"></i>
         </a>
 
+        <!-- Botón hamburguesa (solo se ve en mobile utilicé un JavaScript base ya que desconozco armarlo) -->
         <button class="gp-header-burger"
                 id="gpMenuToggle"
                 aria-label="Abrir menú"
@@ -55,14 +54,25 @@
       </div>
     </div>
 
-    <!-- NAV MOBILE -->
-    <nav class="gp-nav-mobile" id="gpMobileNav">
-      <a href="reservar-cancha.html">Reservar Cancha</a>
-      <a href="score.html">Marcador Gpadel</a>
-      <a href="ayuda-jugadores.html">Ayuda</a>
-      <a href="canchas-ligas.html">Canchas o Ligas</a>
-      <a href="contacto.html">Contacto</a>
-    </nav>
+    <!-- NAV MOBILE (se abre con la hamburguesa, js base extra, repito, no conozco JS aun) -->
+        <nav class="gp-nav-mobile" id="gpMobileNav">
+
+          <a href="reservar-cancha.html">Reservar Cancha</a>
+          <a href="score.html">Marcador Gpadel</a>
+          <a href="inscripcion-torneos.html">Torneos</a>
+          <a href="ayuda-jugadores.html">Ayuda</a>
+          <a href="contacto.html">Contacto</a>
+
+          <!-- Separador visual -->
+          <div class="gp-nav-mobile-divider"></div>
+
+          <!-- Cambio de rol / contexto -->
+          <a href="canchas-ligas.html" class="gp-nav-mobile-switch">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            Canchas o Ligas
+          </a>
+
+        </nav>
   </header>
 
   <!-- MAIN -->
