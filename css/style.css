@@ -18,6 +18,15 @@ para poder usarlo en cuanto necesite sin tener qu poner el codigo*/
   --gp-shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.15);
 }
 
+:root {
+  --gp-font: "Titillium Web", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+  font-family: var(--gp-font);
+}
+
+
 /* Tipografía Titillium igual que la que uso en GENEOS*/
 body {
   margin: 0;
@@ -111,7 +120,8 @@ armé un container-min para reducirlo en algunas secciones que deseaba*/
 }
 
 .gp-nav-link--active {
-  color: var(--gp-text);
+  color: var(--gp-green-dark);
+  font-weight: 800;
 }
 
 /* Acciones header */
@@ -772,6 +782,7 @@ y busque botones en otras páginas pero aun no me funciona bien*/
 
 .gp-pages-hero h1 {
   font-size: 2.9rem;
+  font-weight: 700;
   margin: 0 0 10px;
   color: var(--gp-green);
 }
@@ -806,6 +817,7 @@ y busque botones en otras páginas pero aun no me funciona bien*/
 
 .gp-contact-info h2 {
   font-size: 1.9rem;
+  font-weight: 700;
   margin: 0 0 14px;
   color: var(--gp-blue-dark);
 }
