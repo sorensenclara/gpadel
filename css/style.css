@@ -307,7 +307,7 @@ html, body {
 
   .gp-hero{
     background:var(--gp-blue-dark) url("../img/bggpadel.png") center center no-repeat;
-    padding: 80px 0 70px !important; 
+    padding: 80px 0 70px ; 
   }
 
   .gp-hero-inner{
@@ -343,7 +343,7 @@ html, body {
 
   /* Si existía una imagen/columna de hero, la ocultamos */
   .gp-hero-image{
-    display: none !important;
+    display: none ;
   }
 }
 
@@ -501,7 +501,7 @@ html, body {
 .gp-footer a,
 .gp-footer-link{
   color:var(--gp-white);
-  text-decoration:none !important;
+  text-decoration:none ;
 }
 
 .gp-footer-link:hover .gp-footer-icon,
@@ -646,9 +646,9 @@ html, body {
 
 .gp-time-input{
   width:72px;
-  border:0 !important;
-  background:transparent !important;
-  padding:0 !important;
+  border:0 ;
+  background:transparent ;
+  padding:0 ;
   outline:none;
   font-size:.85rem;
   font-weight:600;
@@ -786,42 +786,40 @@ html, body {
 /* ===============================
    FLATPICKR
 =============================== */
-.flatpickr-day.selected,
-.flatpickr-day.selected:hover,
-.flatpickr-day.selected:focus,
-.flatpickr-day.startRange,
-.flatpickr-day.endRange,
-.flatpickr-day.inRange{
-  background:var(--gp-blue) !important;
-  border-color:var(--gp-blue) !important;
-  color:#fff !important;
+.gp-search-bar-wrapper .flatpickr-day.selected,
+.gp-search-bar-wrapper .flatpickr-day.startRange,
+.gp-search-bar-wrapper .flatpickr-day.endRange,
+.gp-search-bar-wrapper .flatpickr-day.inRange {
+  background: var(--gp-blue);
+  border-color: var(--gp-blue);
+  color: #fff;
 }
 
-.flatpickr-day.today{ border-color:var(--gp-blue) !important; }
+.flatpickr-day.today{ border-color:var(--gp-blue); }
 
 .flatpickr-day:hover{
-  background:rgba(0,91,165,.12) !important;
-  border-color:rgba(0,91,165,.12) !important;
+  background:rgba(0,91,165,.12);
+  border-color:rgba(0,91,165,.12);
 }
 
 .flatpickr-current-month,
 .flatpickr-months .flatpickr-next-month,
 .flatpickr-months .flatpickr-prev-month{
-  color:var(--gp-blue) !important;
-  fill:var(--gp-blue) !important;
+  color:var(--gp-blue);
+  fill:var(--gp-blue);
 }
 
 .flatpickr-calendar.hasTime.noCalendar{
-  width:220px !important;
-  border-radius:16px !important;
-  box-shadow:0 18px 50px rgba(15,23,42,.22) !important;
+  width:220px;
+  border-radius:16px;
+  box-shadow:0 18px 50px rgba(15,23,42,.22);
 }
 
-.flatpickr-time{ height:48px !important; }
+.flatpickr-time{ height:48px; }
 
 .flatpickr-time input{
-  font-size:18px !important;
-  font-weight:700 !important;
+  font-size:18px;
+  font-weight:700;
 }
 
 /* ===============================
@@ -1368,7 +1366,7 @@ body.gp-page-score-type .gp-pages-hero{
 }
 
 @media (min-width:801px){
-  .gp-nav-mobile{ display:none !important; }
+  .gp-nav-mobile{ display:none; }
 }
 
 @media (min-width:1024px){
@@ -1405,20 +1403,20 @@ body.gp-page-score-type .gp-pages-hero{
   }
 
   .gp-courts-grid{
-    display: grid !important;
+    display: grid ;
     grid-template-columns: 1fr;
     gap: 14px;
   }
 
   /* asegurar que las cards no queden ocultas por otra regla */
   .gp-courts-grid > article.gp-court-card{
-    display: block !important;
+    display: block ;
     width: 100%;
   }
 
   /* limitar a 4 resultados visibles */
   .gp-courts-grid > article.gp-court-card:nth-of-type(n+5){
-    display: none !important;
+    display: none ;
   }
 }
 
@@ -1875,7 +1873,7 @@ body.gp-page-torneos .gp-torneo-grid{
   text-transform: uppercase;
   letter-spacing: 0.02em;
   line-height: 1.05;
-  font-size: 2.5rem !important;
+  font-size: 2.5rem ;
   font-size: clamp(2rem, 4vw, 3.2rem);
   color: #1f2a33;
 }
