@@ -369,16 +369,56 @@ body {
 }
 
 .gp-btn--secondary {
+  position: relative;
+  overflow: hidden;
   background: transparent;
   color: var(--gp-white);
-  border-color: var(--gp-green-dark);
+  border: 2px solid var(--gp-green-dark);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  transition: background 0.2s ease-out, color 0.2s ease-out, box-shadow 0.2s ease-out;
+  /* Brillo */
 }
-
+.gp-btn--secondary::before {
+  content: "";
+  position: absolute;
+  top: 7%;
+  left: -30%;
+  width: 20%;
+  height: 86%;
+  background: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 0 40px 20px rgba(255, 255, 255, 0.55);
+  transform: skewX(-20deg);
+  opacity: 0;
+  pointer-events: none;
+}
 .gp-btn--secondary:hover {
-  background-color: var(--gp-green);
+  background: var(--gp-green);
   color: var(--gp-text);
+  box-shadow: 0 0 26px 4px rgba(181, 234, 29, 0.45);
+}
+.gp-btn--secondary:hover::before {
+  animation: gp-btn-shine 0.55s linear;
+}
+.gp-btn--secondary:active {
+  transform: translateY(1px);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
 }
 
+/* ✨ animación de barrido */
+@keyframes gp-btn-shine {
+  0% {
+    opacity: 0;
+    left: -30%;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    left: 120%;
+  }
+}
 /* Botón verde de “construcción” -> lo conectamos al sistema */
 .gp-btn-green { /* compat */
   background-color: var(--gp-green);
