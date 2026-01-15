@@ -47,9 +47,11 @@
       </nav>
       <div class="gp-header-actions">
         <a href="canchas-ligas.html" class="gp-header-cta">Canchas o Ligas</a>
-        <a href="login.html" class="gp-header-icon" aria-label="Iniciar sesión">
-          <i class="fa-regular fa-user"></i>
-        </a>
+      <a href="login.html" class="gp-header-icon gp-header-icon--login" aria-label="Ingresar">
+        <span class="sign"><i class="fa-solid fa-right-to-bracket"></i></span>
+        <span class="text">Ingresar</span>
+      </a>
+
 
         <!-- Botón hamburguesa (solo se ve en mobile utilicé un JavaScript base ya que desconozco armarlo) -->
         <button class="gp-header-burger"
@@ -75,8 +77,10 @@
           <div class="gp-nav-mobile-divider"></div>
 
           <!-- Cambio de rol / contexto -->
+          <div class="gp-nav-mobile-divider"></div>
+
           <a href="canchas-ligas.html" class="gp-nav-mobile-switch">
-            <i class="fa-solid fa-right-from-bracket"></i>
+            <i class="fa-solid fa-right-left"></i>
             Canchas o Ligas
           </a>
 
@@ -92,7 +96,7 @@
 
     <!-- BOTÓN COMPACTO (solo mobile) -->
     <button class="gp-search-compact" id="gpSearchOpen" type="button" aria-label="Reservar cancha">
-      <i class="fa-solid fa-magnifying-glass"></i>
+      <i class="fa-regular fa-calendar"></i>
       <span>Reservar cancha</span>
     </button>
 
