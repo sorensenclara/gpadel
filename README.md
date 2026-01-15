@@ -34,3 +34,16 @@ El proyecto fue publicado utilizando GitHub Pages, permitiendo su visualización
 
 URL del proyecto:
 https://sorensenclara.github.io/gpadel/
+
+Realicé además la migración dese style.css a GPADEL SCSS
+## instale con
+- bash
+- npm i -D sass
+## compliación
+- bash 
+- npx sass scss/style.scss css/style.css --watch
+## estructura que arme
+- `scss/base/` variables, mixins, reset, helpers
+- `scss/layout/` header/footer
+- `scss/components/` botones, search
+- `scss/pages/` páginas

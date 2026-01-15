@@ -1,0 +1,42 @@
+/* ===============================
+   5) BOTONES
+=============================== */
+.gp-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:10px 22px;
+  border-radius:var(--gp-radius-pill);
+  font-size:.85rem;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.05em;
+  text-decoration:none;
+  cursor:pointer;
+  border:2px solid transparent;
+}
+.gp-btn--primary{
+  background:var(--gp-green);
+  color:var(--gp-text);
+}
+.gp-btn--primary:hover{ filter:brightness(1.05); }
+
+.gp-btn--secondary{
+  background:transparent;
+  color:var(--gp-white);
+  border-color:var(--gp-green-dark);
+}
+.gp-btn--secondary:hover{ background-color:var(--gp-green); color:var(--gp-text); }
+
+/* Botón verde de “construcción” -> lo conectamos al sistema */
+.gp-btn-green{ /* compat */
+  background-color:var(--gp-green);
+  border-color:var(--gp-green);
+  color:#000;
+}
+.gp-btn-green:hover,
+.gp-btn-green:focus{
+  background-color:var(--gp-green-dark);
+  border-color:#9fcf00;
+  color:#000;
+}
