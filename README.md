@@ -35,6 +35,8 @@ El proyecto fue publicado utilizando GitHub Pages, permitiendo su visualización
 URL del proyecto:
 https://sorensenclara.github.io/gpadel/
 
+
+TP2 - 2da entrega
 Realicé además la migración dese style.css a GPADEL SCSS
 ## instale con
 - bash
@@ -47,3 +49,5 @@ Realicé además la migración dese style.css a GPADEL SCSS
 - `scss/layout/` header/footer
 - `scss/components/` botones, search
 - `scss/pages/` páginas
+
+Sumé animaciones a botones, auspiciantes y cards.

@@ -3,9 +3,6 @@
 // =========================================================
 @use "variables" as *;
 
-// Media query helper
-// Uso: @include mq(max, m800) { ... }
-//      @include mq(min, desktop-from) { ... }
 @mixin mq($type, $key) {
   $value: map-get($bp, $key);
 
@@ -30,7 +27,7 @@
   @if $gap != null { gap: $gap; }
 }
 
-// Button base (para extender o usar en componentes)
+// Button base
 @mixin gp-btn-base {
   display: inline-flex;
   align-items: center;

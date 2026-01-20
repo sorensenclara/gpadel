@@ -32,7 +32,7 @@ $gp-shadow-card: 0 12px 30px rgba(15, 23, 42, .08);
 // Typography
 $gp-font: "Titillium Web", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 
-// Breakpoints (los tuyos)
+// Breakpoints
 $bp: (
   xl: 1400px,
   lg: 1024px,
@@ -47,7 +47,6 @@ $bp: (
   lg-from: 1024px
 );
 
-// Exportamos variables a CSS Custom Properties (para que tus var(--gp-*) sigan funcionando)
 :root {
   --gp-blue: #{$gp-blue};
   --gp-blue-dark: #{$gp-blue-dark};

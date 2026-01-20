@@ -1,6 +1,5 @@
 /* ===============================
-   16) RESPONSIVE (AGRUPADO POR MEDIDAS)
-   Nota: mantengo tus “800px” porque ya lo usabas mucho.
+   16) RESPONSIVE
 =============================== */
 
 /* <= 1400px */
@@ -120,8 +119,7 @@
 /* <= 768px */
 @media (max-width:768px){
   .gp-entrada-options{ grid-template-columns:1fr; }
-
-  /* testimonios flechas en desktop solamente; en mobile quedan en flujo */
+  
   .gp-sponsor img{ height:64px; }
 }
 

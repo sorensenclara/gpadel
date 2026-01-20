@@ -210,8 +210,7 @@
     font-weight: 700;
     color: var(--gp-blue-text);
     text-decoration: none;
-
-    // SOLO links normales tienen separador
+    
     & + a:not(.gp-nav-mobile-switch) {
       border-top: 1px solid var(--gp-green);
     }
