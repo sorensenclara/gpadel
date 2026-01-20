@@ -1,10 +1,11 @@
 // =========================================================
 // Mixins - GPADEL
 // =========================================================
+@use "sass:map";
 @use "variables" as *;
 
 @mixin mq($type, $key) {
-  $value: map-get($bp, $key);
+  $value: map.get($bp, $key);
 
   @if $value == null {
     @error "Breakpoint '#{$key}' no existe en $bp map.";
