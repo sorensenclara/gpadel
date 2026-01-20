@@ -53,7 +53,7 @@ body {
 }
 
 /* ===============================
-   2) CONTAINERS
+CONTAINERS
 =============================== */
 .gp-container {
   width: 100%;
@@ -70,7 +70,7 @@ body {
 }
 
 /* ===============================
-   3) HELPERS / UTILITIES
+HELPERS / UTILITIES
 =============================== */
 .gp-card {
   background: var(--gp-white);
@@ -342,7 +342,7 @@ body {
   }
 }
 /* ===============================
-   7) FOOTER
+FOOTER
 =============================== */
 .gp-footer {
   background: #000;
@@ -377,7 +377,7 @@ body {
 }
 
 /* ===============================
-   5) BOTONES
+BOTONES
 =============================== */
 .gp-btn {
   display: inline-flex;
@@ -469,7 +469,7 @@ body {
 }
 
 /* ===============================
-   8) SEARCH (HOME / RESERVAR) + FLATPICKR
+SEARCH (HOME / RESERVAR) + FLATPICKR
 =============================== */
 .gp-search-bar-wrapper {
   border-top: 1px solid rgba(15, 23, 42, 0.04);
@@ -777,7 +777,7 @@ body {
 }
 
 /* ===============================
-   6) HOME: HERO + SECCIONES
+HOME: HERO + SECCIONES
 =============================== */
 .gp-hero {
   background: var(--gp-blue-dark) url("../img/bggpadel.png") center center no-repeat;
@@ -965,8 +965,6 @@ body {
 /* ===============================
 AYUDA A JUGADORES
 =============================== */
-/* APLICO TRANSICIÓN A LA IMAGEN PARA TP3
-=============================== */
 .gp-dashboard-image {
   overflow: hidden;
 }
@@ -998,7 +996,7 @@ AYUDA A JUGADORES
 }
 
 /* ===============================
-   9) RESULTADOS (CANCHAS)
+RESULTADOS (CANCHAS)
 =============================== */
 .gp-results {
   padding: 40px 0 60px;
@@ -1087,7 +1085,7 @@ AYUDA A JUGADORES
 }
 
 /* ===============================
-   10) PÁGINAS: HERO GENÉRICO + SCORE TYPE
+PÁGINAS: HERO GENÉRICO + SCORE TYPE
 =============================== */
 .gp-pages-hero {
   width: 100%;
@@ -1154,7 +1152,7 @@ body.gp-page-score-type .gp-pages-hero {
 }
 
 /* ===============================
-   11) PÁGINA: CONTACTO
+PÁGINA: CONTACTO
 =============================== */
 .gp-contact-main {
   padding: 40px 0 70px;
@@ -1287,7 +1285,7 @@ body.gp-page-score-type .gp-pages-hero {
 }
 
 /* ===============================
-   12) PÁGINA: ENTRADA
+PÁGINA: ENTRADA
 =============================== */
 body.gp-entrada {
   margin: 0;
@@ -1378,7 +1376,7 @@ body.gp-entrada {
 }
 
 /* ===============================
-   13) LOGIN
+LOGIN
 =============================== */
 .gp-login {
   background: var(--gp-bg);
@@ -1535,7 +1533,7 @@ body.gp-entrada {
 }
 
 /* ===============================
-   14) TORNEOS + SPONSORS
+TORNEOS + SPONSORS
 =============================== */
 .gp-torneos {
   background: var(--gp-bg);
@@ -1807,7 +1805,7 @@ body.gp-page-torneos .gp-torneo-grid {
 }
 
 /* ===============================
-   15) SITIO EN CONSTRUCCIÓN
+SITIO EN CONSTRUCCIÓN
 =============================== */
 body.page-construction {
   background: url("../img/bggpadel.png") center center no-repeat;
@@ -1819,7 +1817,7 @@ body.page-construction {
 }
 
 /* ===============================
-   16) RESPONSIVE
+RESPONSIVE
 =============================== */
 /* <= 1400px */
 @media (max-width: 1400px) {
