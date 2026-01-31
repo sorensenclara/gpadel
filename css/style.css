@@ -780,7 +780,7 @@ SEARCH (HOME / RESERVAR) + FLATPICKR
 HOME: HERO + SECCIONES
 =============================== */
 .gp-hero {
-  background: var(--gp-blue-dark) url("../img/bggpadel.png") center center no-repeat;
+  background: var(--gp-blue-dark) url("../img/bggpadel.webp") center center no-repeat;
   background-size: cover;
   color: var(--gp-white);
 }
@@ -1091,7 +1091,7 @@ PÁGINAS: HERO GENÉRICO + SCORE TYPE
   width: 100%;
   margin: 0;
   padding: 40px 0 40px;
-  background: var(--gp-blue-dark) url("../img/bggpadel.png") center center no-repeat;
+  background: var(--gp-blue-dark) url("../img/bggpadel.webp") center center no-repeat;
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -1636,6 +1636,12 @@ body.gp-page-torneos .gp-torneo-card {
   width: 100%;
 }
 
+body.gp-page-torneos .gp-torneo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
 .gp-torneo-card {
   background: #fff;
   border-radius: var(--gp-radius-md);
@@ -1815,7 +1821,7 @@ body.gp-page-torneos .gp-torneo-card {
 SITIO EN CONSTRUCCIÓN
 =============================== */
 body.page-construction {
-  background: url("../img/bggpadel.png") center center no-repeat;
+  background: url("../img/bggpadel.webp") center center no-repeat;
   background-size: cover;
 }
 
