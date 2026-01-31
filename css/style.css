@@ -1617,30 +1617,23 @@ body.gp-page-torneos .gp-filterbar {
   font-size: 0.95rem;
 }
 
-.gp-torneo-grid {
+body.gp-page-torneos .gp-torneo-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  gap: 18px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 @media (max-width: 991.98px) {
-  .gp-torneo-grid {
-    grid-template-columns: repeat(2, 1fr);
+  body.gp-page-torneos .gp-torneo-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
-@media (max-width: 575.98px) {
-  .gp-torneo-grid {
+@media (max-width: 767.98px) {
+  body.gp-page-torneos .gp-torneo-grid {
     grid-template-columns: 1fr;
   }
 }
-
-.gp-torneo-card {
+body.gp-page-torneos .gp-torneo-card {
   width: 100%;
-}
-
-body.gp-page-torneos .gp-torneo-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
 }
 
 .gp-torneo-card {

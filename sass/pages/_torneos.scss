@@ -62,25 +62,27 @@ body.gp-page-torneos .gp-filterbar{ margin:-26px auto 26px; }
 }
 .gp-torneos-head p{ margin:0; color:var(--gp-muted); font-size:.95rem; }
 
-.gp-torneo-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+body.gp-page-torneos {
+  .gp-torneo-grid {
+    display: grid;
+    gap: 18px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
 
-  // Tablet
-  @media (max-width: 991.98px) {
-    grid-template-columns: repeat(2, 1fr);
+    @media (max-width: 991.98px) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @media (max-width: 767.98px) {
+      grid-template-columns: 1fr;
+    }
   }
 
-  // Mobile
-  @media (max-width: 575.98px) {
-    grid-template-columns: 1fr;
+  .gp-torneo-card {
+    width: 100%;
   }
 }
 
-.gp-torneo-card {
-  width: 100%;
-}
+
 body.gp-page-torneos .gp-torneo-grid{
   display:grid;
   grid-template-columns:repeat(3,minmax(0,1fr));
