@@ -49,6 +49,17 @@ Si bien existen posibles mejoras futuras —como reemplazar bloques de imágenes
 
 Se realizó la **migración de estilos desde CSS plano a SCSS**, organizando el código en parciales para mejorar la escalabilidad y mantenimiento del proyecto.
 
-### Instalación de Sass
-```bash
-npm i -D sass
+
+## Mejora de velocidad de carga y SEO
+
+- Durante el desarrollo del proyecto se realizaron optimizaciones orientadas a mejorar el rendimiento, la experiencia de usuario y las buenas prácticas de SEO y accesibilidad, entre ellas:
+- Conversión de imágenes a formatos más livianos (WebP) y ajuste de tamaños según su uso real en pantalla.
+- Optimización del hero principal reemplazando el fondo definido por CSS por una imagen de fondo real en HTML, lo que mejora el indicador LCP (Largest Contentful Paint).
+- Uso correcto del atributo alt:
+    - Las imágenes decorativas (fondos) se dejaron con alt="" y aria-hidden="true", ya que no aportan información relevante y no deben ser leídas por lectores de pantalla.
+    - Las imágenes con contenido informativo sí cuentan con textos alternativos descriptivos.
+- Aplicación de atributos de performance en imágenes:
+    - fetchpriority="high" para indicar al navegador que la imagen principal del hero es crítica y debe descargarse con mayor prioridad.
+    - decoding="async" para permitir que la decodificación de imágenes se realice de forma asíncrona, evitando bloquear el renderizado inicial de la página.
+    - loading="lazy" en imágenes secundarias para retrasar su carga hasta que sean necesarias.
+- Estas mejoras contribuyen a una carga más rápida del sitio, una mejor puntuación en herramientas como PageSpeed / Lighthouse, y una experiencia más accesible para todos los usuarios.

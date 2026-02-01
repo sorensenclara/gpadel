@@ -310,71 +310,68 @@
 
 </main>
 
-<!-- FOOTER boostrap -->
-    <footer class="gp-footer bg-black text-white pt-5 pb-4">
+<!-- FOOTER (Bootstrap + agrego accesibilidad con arial-lavel en iconos) -->
+  <footer class="gp-footer bg-black text-white pt-5 pb-4" role="contentinfo">
+    <div class="container">
 
-  <div class="container">
+      <!-- BLOQUES PRINCIPALES -->
+      <div class="row text-center mb-4">
 
-    <!-- BLOQUES PRINCIPALES -->
-    <div class="row text-center mb-4">
+        <!-- WhatsApp -->
+        <div class="col-12 col-md-4 mb-4 mb-md-0">
+          <a href="https://wa.me/5492494521418" target="_blank" rel="noopener" aria-label="Contactar a GPADEL por WhatsApp" class="gp-footer-link d-flex flex-column align-items-center text-white text-decoration-none">
+            <i class="fa-brands fa-whatsapp gp-footer-icon mb-2" aria-hidden="true"></i>
+            <span class="gp-footer-text">+54 9 249 4521418</span>
+          </a>
+        </div>
 
-      <!-- WhatsApp -->
-      <div class="col-12 col-md-4 mb-4 mb-md-0">
-        <a href="https://wa.me/5492494521418"
-           target="_blank"
-           class="gp-footer-link d-flex flex-column align-items-center text-white text-decoration-none">
-          <i class="fa-brands fa-whatsapp gp-footer-icon mb-2"></i>
-          <span class="gp-footer-text">+54 9 249 4521418</span>
-        </a>
+        <!-- Email -->
+        <div class="col-12 col-md-4 mb-4 mb-md-0">
+          <a href="mailto:info@gpadel.com.ar" aria-label="Enviar un correo a info@gpadel.com.ar" class="gp-footer-link d-flex flex-column align-items-center text-white text-decoration-none">
+            <i class="fa-regular fa-envelope gp-footer-icon mb-2" aria-hidden="true"></i>
+            <span class="gp-footer-text">info@gpadel.com.ar</span>
+          </a>
+        </div>
+
+        <!-- Dirección -->
+        <div class="col-12 col-md-4">
+          <a href="https://www.google.com/maps?q=Alem+1015,+Tandil" target="_blank" rel="noopener" aria-label="Ver ubicación de GPADEL en Google Maps" class="gp-footer-link d-flex flex-column align-items-center text-white text-decoration-none">
+            <i class="fa-solid fa-map-location-dot gp-footer-icon mb-2" aria-hidden="true"></i>
+            <span class="gp-footer-text text-center">
+              Alem 1015 – Tandil<br>
+              Buenos Aires – Argentina
+            </span>
+          </a>
+        </div>
+
       </div>
 
-      <!-- Email -->
-      <div class="col-12 col-md-4 mb-4 mb-md-0">
-        <a href="mailto:info@gpadel.com.ar"
-           class="gp-footer-link d-flex flex-column align-items-center text-white text-decoration-none">
-          <i class="fa-regular fa-envelope gp-footer-icon mb-2"></i>
-          <span class="gp-footer-text">info@gpadel.com.ar</span>
+      <!-- REDES SOCIALES -->
+      <nav class="d-flex justify-content-center gap-4 mb-3" aria-label="Redes sociales de GPADEL">
+        <a href="https://facebook.com/geneoscoop" target="_blank" rel="noopener" aria-label="Facebook de GPADEL" class="text-white">
+          <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
         </a>
-      </div>
 
-      <!-- Dirección -->
-      <div class="col-12 col-md-4">
-        <a href="https://www.google.com/maps?q=Alem+1015,+Tandil"
-           target="_blank"
-           class="gp-footer-link d-flex flex-column align-items-center text-white text-decoration-none">
-          <i class="fa-solid fa-map-location-dot gp-footer-icon mb-2"></i>
-          <span class="gp-footer-text text-center">
-            Alem 1015 – Tandil<br>
-            Buenos Aires – Argentina
-          </span>
+        <a href="https://instagram.com/geneos.coop" target="_blank" rel="noopener" aria-label="Instagram de GPADEL" class="text-white">
+          <i class="fa-brands fa-instagram" aria-hidden="true"></i>
         </a>
+
+        <a href="https://twitter.com/GeneosCoop" target="_blank" rel="noopener" aria-label="Twitter de GPADEL" class="text-white">
+          <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+        </a>
+
+        <a href="https://www.linkedin.com/company/geneoscoop/" target="_blank" rel="noopener" aria-label="LinkedIn de GPADEL" class="text-white">
+          <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+        </a>
+      </nav>
+
+      <!-- COPYRIGHT -->
+      <div class="text-center small opacity-75">
+        DISEÑADO POR COOPERATIVA GENEOS LTDA.
       </div>
 
     </div>
-
-    <!-- REDES SOCIALES -->
-    <div class="d-flex justify-content-center gap-4 mb-3">
-      <a href="https://facebook.com/geneoscoop" target="_blank" class="text-white">
-        <i class="fa-brands fa-facebook-f"></i>
-      </a>
-      <a href="https://instagram.com/geneos.coop" target="_blank" class="text-white">
-        <i class="fa-brands fa-instagram"></i>
-      </a>
-      <a href="https://twitter.com/GeneosCoop" target="_blank" class="text-white">
-        <i class="fa-brands fa-x-twitter"></i>
-      </a>
-      <a href="https://www.linkedin.com/company/geneoscoop/" target="_blank" class="text-white">
-        <i class="fa-brands fa-linkedin-in"></i>
-      </a>
-    </div>
-
-    <!-- COPYRIGHT -->
-    <div class="text-center small opacity-75">
-      DISEÑADO POR COOPERATIVA GENEOS LTDA.
-    </div>
-
-  </div>
-</footer>
+  </footer>
 
 
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
