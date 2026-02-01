@@ -1665,12 +1665,6 @@ body.gp-page-torneos .gp-torneo-card {
   width: 100%;
 }
 
-body.gp-page-torneos .gp-torneo-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
-}
-
 .gp-torneo-card {
   background: #fff;
   border-radius: var(--gp-radius-md);
