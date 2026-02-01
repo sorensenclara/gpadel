@@ -2,31 +2,49 @@
 HOME: HERO + SECCIONES
 =============================== */
 .gp-hero{
-  background:var(--gp-blue-dark) url("../img/bggpadel.webp") center center no-repeat;
-  background-size:cover;
-  color:var(--gp-white);
+  position: relative;
+  overflow: hidden;
+  background: var(--gp-blue-dark); 
+  color: var(--gp-white);
 }
+
+.gp-hero-bg{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* Contenido por encima del fondo */
 .gp-hero-inner{
-  display:flex;
-  align-items:center;
-  gap:40px;
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  align-items: center;
+  gap: 40px;
 }
+
 .gp-hero-text h1{
-  font-size:2.4rem;
-  font-weight:700;
-  line-height:1.15;
-  margin:0 0 16px;
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.15;
+  margin: 0 0 16px;
 }
+
 .gp-hero-text p{
-  margin:0 0 24px;
-  max-width:420px;
-  color:var(--gp-white);
-  font-size:.95rem;
+  margin: 0 0 24px;
+  max-width: 420px;
+  color: var(--gp-white);
+  font-size: .95rem;
 }
+
 .gp-hero-cta{
-  display:flex;
-  gap:12px;
-  margin-top:20px;
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
 }
 
 .gp-section{ padding:60px 0; background:var(--gp-white); }

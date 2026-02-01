@@ -169,6 +169,9 @@
 
 <!-- HERO -->
 <section id="hero" class="gp-hero">
+  <!-- Cambién la imagen de bg en css a fondo REAL (para mejora LCP que me relenterizaba la web) -->
+  <img class="gp-hero-bg" src="../img/bggpadel.webp" alt="" fetchpriority="high" decoding="async">
+
   <div class="gp-container gp-hero-inner">
 
     <div class="gp-hero-text">
@@ -176,13 +179,17 @@
       <p>Organizá tus partidos y turnos desde un solo lugar.</p>
 
       <div class="gp-hero-cta">
-        <a href="./reservar-cancha.html" class="gp-btn gp-btn--primary">Reservar Cancha</a>
-        <a href="./score.html" class="gp-btn gp-btn--secondary">Marcador Gpadel</a>
+        <a href="./reservar-cancha.html" class="gp-btn gp-btn--primary">
+          Reservar Cancha
+        </a>
+        <a href="./score.html" class="gp-btn gp-btn--secondary">
+          Marcador Gpadel
+        </a>
       </div>
     </div>
 
     <div class="gp-hero-image">
-      <img src="../img/img-pelota-gpadel.png" alt="Pelota de pádel">
+      <img src="../img/img-pelota-gpadel.png" alt="Pelota de pádel" loading="lazy" decoding="async">
     </div>
 
   </div>
