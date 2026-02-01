@@ -63,3 +63,4 @@ Se realizó la **migración de estilos desde CSS plano a SCSS**, organizando el 
     - decoding="async" para permitir que la decodificación de imágenes se realice de forma asíncrona, evitando bloquear el renderizado inicial de la página.
     - loading="lazy" en imágenes secundarias para retrasar su carga hasta que sean necesarias.
 - Estas mejoras contribuyen a una carga más rápida del sitio, una mejor puntuación en herramientas como PageSpeed / Lighthouse, y una experiencia más accesible para todos los usuarios.
+- Revisé los íconos del sitio y agregué aria-label solo en enlaces que contienen íconos sin texto o con links, y aria-hidden="true" en íconos decorativos para mejorar la accesibilidad.
